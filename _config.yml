@@ -19,8 +19,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Committing to Documentation
-description: The guide and documentation for the "Committing to Documentation" workshop
+title: Future Docs Template
+description: Template site for the "Committing to Documentation" workshop
 search_enabled: true
 remote_theme: pmarsceill/just-the-docs
 #search_tokenizer_separator: /[\s/]+/
