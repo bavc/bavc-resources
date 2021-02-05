@@ -1,8 +1,8 @@
 ---
-title: Front Page
+title: Page two
 layout: default
-nav_order: 1
+nav_order: 2
 ---
 
-# Front page
+# Second page
 Your content goes here!
