@@ -1,2 +1,2 @@
-# ctod
-Committing to Documentation: The Site!
+# futureDocs
+Committing to Documentation: The Template!
