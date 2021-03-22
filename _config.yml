@@ -23,7 +23,9 @@ title: Future Docs Template
 description: Template site for the "Committing to Documentation" workshop
 search_enabled: true
 remote_theme: pmarsceill/just-the-docs
-#search_tokenizer_separator: /[\s/]+/
+search_enabled: true
+search.previews: 3
+search_tokenizer_separator: /[\s/]+/
 #heading_anchors: true
 #color_scheme: "dark"
 #theme: "just-the-docs"
