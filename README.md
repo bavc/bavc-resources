@@ -3,3 +3,4 @@
 This site is the template for the workshop [Committing to Documentation](https://ctodocs.github.io/ctod/), created by Genevieve Havemeyer-King, Alison Rhonemus, and Nick Krabbenhoeft. 
 
 
+# Docs are awesome
