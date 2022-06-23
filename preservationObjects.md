@@ -3,7 +3,7 @@
 ## Preservation Object Detail
 
 ### Intake/Inspection
-*Complete during intake*
+* *Complete during intake*
 
 * Intake/Inspection covers all inventorying and condition information gathered upon (you guessed it) initial intake and inspection!
 
@@ -25,7 +25,7 @@
     - **Inspection/Condition Notes:** Note any physical issues related to the tape or it’s housing here. Examples of notes you may make are popped strands, stepping, no case, dirty, removed record tape etc. If mold is found, please note in inspection/condition notes AND technician notes. Also, alert a staff member immediately.
 
 ## Transfer Environment
-*Complete before capture*
+* *Complete before capture*
 
     - **Transfer Suite:** Choose the preservation room you are working in from drop down menu
     - **Transfer Technician:** Begin typing your own name. It should appear quickly and you can chose it from the list that appears
@@ -40,7 +40,7 @@
     - **Trim Software:** Choose from drop down menu. We currently use QuickTime7 almost exclusively to trim files. 
 
 ## Video Transfer Elements
-*Complete before capture - Video*
+* *Complete before capture - Video*
 
     - **Analog Video Transmission:** Choose the transmission method from the drop down menu
     - **Color:** Choose from drop down menu
@@ -55,7 +55,7 @@
     - **Video Transfer Notes:** Notes about the transfer you would like your colleagues and QC technician to see, ex. *File captured twice on two different TBCs. Please review both.*
 
 ## Audio Transfer Elements
-*Complete before capture - Audio*
+* *Complete before capture - Audio*
 
     - **Audio Material Type:** Choose from drop down menu
     - **Audio Speed:** Choose from drop down menu
@@ -65,7 +65,7 @@
     - **Audio Transfer Notes:** Notes about the transfer you would like your colleagues and QC technician to see
 
 ## Supervised Transfer Notes
-*Complete after capture*
+* *Complete after capture
 
 * **Technician's Notes**
     - Technician’s Notes should contain *general* information about the overall condition of the tape content, ex. regularity of drop outs (occasional, regular, heavy), presence of double headswitching, regular instances of sync loss.
