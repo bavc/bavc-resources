@@ -26,7 +26,7 @@
 
 ## Transfer Environment
 *Complete before capture*
-
+* 
     - **Transfer Suite:** Choose the preservation room you are working in from drop down menu
     - **Transfer Technician:** Begin typing your own name. It should appear quickly and you can chose it from the list that appears
     - **Transfer Date:** Current date
