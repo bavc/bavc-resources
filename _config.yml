@@ -19,7 +19,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Future Docs Template
+title: BAVC Resources
 description: Template site for the "Committing to Documentation" workshop
 search_enabled: true
 remote_theme: pmarsceill/just-the-docs
