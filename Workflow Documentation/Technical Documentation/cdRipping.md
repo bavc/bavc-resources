@@ -4,9 +4,9 @@ There are generally 2 types of CDs: CD-ROM and CD-DA. CD-ROMs contain an imaged 
 
 ## Ripping CD-DA discs
 
-CD-DA discs are audio CD's. These are the kind of CDs that would play in a typical audio CD player. They would also automatically open iTunes or Windows Media Player if inserted into a computer's disc drive.
+CD-DA discs are audio CD's. These are the kind of CDs that would play in a typical audio CD player. They would also autoamtically open iTunes or Windows Media Player if insterted into a computer's 
 
-### Required Software
+## Required Software
 
 * XLD
    * You can install by either:
@@ -14,7 +14,7 @@ CD-DA discs are audio CD's. These are the kind of CDs that would play in a typic
       * If you have homebrew install you can run the command `brew install xld`
 
 
-### How To Rip
+## How To Rip
 * Create folder with unique file name (BAVCbarcode_client ID)
 * Open XLD, set output directory to new folder
 * Under file name, set to custom and paste in folder name
@@ -38,7 +38,7 @@ CD-DA discs are audio CD's. These are the kind of CDs that would play in a typic
    * Insert CD and let the program take over
 
 
-### During Rip
+## During Rip
 * Barcode Case
 * Do NOT barcode CD
 * Update Intake details
@@ -69,7 +69,7 @@ CD-DA discs are audio CD's. These are the kind of CDs that would play in a typic
       * Any errors encountered during transfer or any other salient information
       * Mention if the tracklist noted in liner notes or on the container differs from the cue file tracklist.
 
-### After Rip
+## After Rip
 * Rename log file to match ripped wav file name, but with .log extension
 * Check log file for track number, any errors
    * If there are errors, Mark file as review in Salesforce and check the file’s spectrogram for an obvious errors
@@ -79,9 +79,9 @@ CD-DA discs are audio CD's. These are the kind of CDs that would play in a typic
    * `cdEngine.py -i /Path/To/Folder`
    * It is also possible to run the `cdEngine.py` script on a single folder containing the files for a single CD if you’d like.
 
-### Quality Control
+## Quality Control
 
-#### Bulk Quality Control
+### Bulk Quality Control
 Since CDs are often transferred in large volumes, it’s best to check specifics about the metadata in bulk using BWFMetaEdit.
 
 * Open BWFMetaEdit
@@ -113,7 +113,7 @@ Since CDs are often transferred in large volumes, it’s best to check specifics
       * **ICRD**
          * Should be the original recording date of the CD (if it exists)
 
-#### File by file Quality Control
+### File by file Quality Control
 For the most part these files can be QC’d in bulk, but there are a few things that need to be checked individually.
 
 * File playback
@@ -123,7 +123,7 @@ For the most part these files can be QC’d in bulk, but there are a few things 
    * Opening the MP3 in iTunes will show the file’s embedded metadata. Make sure that it looks correct compared to the metadata in the Salesforce record
    * If MP3 is split, check that the number of MP3 files matches the tracklist in the CUE and LOG files.
 
-#### Bulk QC Updates in Salesforce
+### Bulk QC Updates in Salesforce
 Because CDs often come in large numbers, it’s easier to update the QC records for them in bulk using Views in Preservation.
 
 * Open the Preservation Object View named !(CD QC)[https://bavc.lightning.force.com/lightning/o/Preservation_Object__c/list?filterName=00B2J000009e0vzUAA]
