@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Quality Control (QC
+title: Quality Control (QC)
 parent: Technical Documentation
 ---
 
