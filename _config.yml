@@ -28,7 +28,7 @@ search.previews: 3
 search_tokenizer_separator: /[\s/]+/
 #heading_anchors: true
 color_scheme: "dark"
-theme: "just-the-docs"
+#theme: "just-the-docs"
 aux_links:
   "BAVC Resources source on GitHub":
     - "//github.com/bavc/bavc-resources"
