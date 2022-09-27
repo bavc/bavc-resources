@@ -4,7 +4,6 @@ There are generally 2 types of CDs: CD-ROM and CD-DA. CD-ROMs contain an imaged 
 
 ## Ripping CD-DA discs
 
-CD-DA discs are audio CD's. These are the kind of CDs that would play in a typical audio CD player. They would also autoamtically open iTunes or Windows Media Player if insterted into a computer's 
 
 ## Required Software
 
