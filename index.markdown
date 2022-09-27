@@ -1,5 +1,5 @@
 ---
-title: Front Page
+title: Welcome
 layout: default
 nav_order: 1
 ---
