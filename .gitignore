@@ -14,6 +14,7 @@ Gemfile.lock
 
 # Mac/Windows System Files
 .DS_Store
+*.DS_Store
 ._*
 Icon
 
