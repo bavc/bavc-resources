@@ -1,3 +1,9 @@
+---
+layout: page
+title: CD Ripping
+nav_order: 2
+---
+
 # CD Ripping
 
 There are generally 2 types of CDs: CD-ROM and CD-DA. CD-ROMs contain an imaged volume with data, and can generally be treated like DVDs but with slightly different ripping parameters. CD-DAs contain just audio, and need to be ripped with special software.
