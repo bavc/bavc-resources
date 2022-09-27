@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CD Ripping
-nav_order: 2
+parent: Technical Documentation
 ---
 
 # CD Ripping
