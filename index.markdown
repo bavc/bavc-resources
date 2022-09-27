@@ -4,5 +4,5 @@ layout: default
 nav_order: 1
 ---
 
-# Front page
-Your content goes here!
+# Welcome to BAVC Resources
+This is a landing page for all of BAVC Preservation's public workflow and resource documents
