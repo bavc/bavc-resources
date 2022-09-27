@@ -30,7 +30,7 @@ There are generally 2 types of CDs: CD-ROM and CD-DA. CD-ROMs contain an imaged 
       * ✅ Automatically open disc upon insertion
       * All other fields are optional, set them as you'd like
    * You can use this image for reference:
-      * <img src="/assets/images/XLD-Options.png" alt="">
+      * ![XLD Options](/assets/images/XLD-Options.png)
 
 
 This page is mostly incomplete, and is just a landing page for research on the topic.
