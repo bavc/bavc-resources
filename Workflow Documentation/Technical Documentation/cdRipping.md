@@ -4,7 +4,7 @@
 
 * XLD
    - You can install by either:
-   - Installing the DMG file from [this site]: http://sourceforge.net/projects/xld/files/xld-20220917.dmg
+   - Installing the DMG file from [this site](http://sourceforge.net/projects/xld/files/xld-20220917.dmg)
    - If you have homebrew install you can run the command `brew install xld`
 
 This page is mostly incomplete, and is just a landing page for research on the topic.
