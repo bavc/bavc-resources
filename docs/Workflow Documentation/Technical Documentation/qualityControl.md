@@ -1,3 +1,9 @@
+---
+layout: page
+title: Quality Control (QC
+parent: Technical Documentation
+---
+
 # Quality Control (QC)
 
 ## QCing Files Using Salesforce

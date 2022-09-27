@@ -1,3 +1,9 @@
+---
+layout: page
+title: Cleaning Tapes
+parent: Services
+---
+
 # Cleaning Tapes
 
 * **1/2 Inch**
@@ -19,7 +25,7 @@
     - Open lid of cleaning deck, and hang lid from nail above deck using rubber bands attached to lid
     - Clean entire tape path with cotton swatches and alcohol
     - Turn on power switch bottom right underneath deck (and step back or you will get hit in the face!)
-    - Once alcohol has evaporated, put tape in deck 
+    - Once alcohol has evaporated, put tape in deck
     - Press CLEAN button followed by AUTO - tape will now fast forward and then rewind while cleaning
     - Once tape has self ejected following cleaning, use dentist's mirror to check how much dirt has been removed by cleaning rolls
     - If cleaning rolls has removed a lot of dirt, repeat cleaning procedure
@@ -33,7 +39,7 @@
     - Open lid of cleaning deck.
     - Clean entire tape path with cotton swatches and alcohol.
     - Turn on deck (power switch bottom left underneath deck).
-    - Once alcohol has evaporated, put tape in deck. 
+    - Once alcohol has evaporated, put tape in deck.
     - Press START.
     - Once tape has self ejected following cleaning, use dentist's mirror to check how much dirt has been removed by cleaning rolls
     - If cleaning rolls has removed a lot of dirt, repeat cleaning procedure

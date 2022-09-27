@@ -1,15 +1,21 @@
+---
+layout: page
+title: DVD Creation
+parent: Technical Documentation
+---
+
 # DVD Creation
 
 ## DVD Creation From File
 
 ### Using Terminal
 * **Run make_dvd_iso.sh**
-    - We have a script called make_dvd_iso.sh (attached). 
+    - We have a script called make_dvd_iso.sh (attached).
     - If you already have it installed on your machine, simply run the following two scripts in Terminal:
         - cd (directory)
-        - make_dvd_iso.sh * 
+        - make_dvd_iso.sh *
 * **Install make_dvd.iso.sh
-    - In order for the script to work, your computer needs to have the following installed: ffmpeg, ffprobe, dvdauthor, and cdrtools. If you don't have these, submit a ticket to get them installed (or use homebrew). If you don't have the script installed, do the following: 
+    - In order for the script to work, your computer needs to have the following installed: ffmpeg, ffprobe, dvdauthor, and cdrtools. If you don't have these, submit a ticket to get them installed (or use homebrew). If you don't have the script installed, do the following:
         - Install, update, or upgrade Homebrew
         - Download the attached make_dvd-iso.sh script
         - Move the script to the /usr/location/bin folder and change permissions

@@ -1,3 +1,9 @@
+---
+layout: page
+title: Video Transfer Workflow
+parent: Services
+---
+
 # General Tape Transfer Workflow
 
 ## Start of Day
@@ -16,7 +22,7 @@
 * Clean deck thoroughly, ensuring the entire tape path and heads are free of dirt
 * Open **Terminal** and type in **vrecord -p** (passthrough mode)
 * Ensure that your video settings in **vrecord** are correct. If not, type **vrecord -e** and select the appropriate configuration for that specific client and/or format. Return to vrecord's passthrough mode
-* Insert a Bars & Tone tape to adjust waveform/vectorscope and audio within Broadcast range (or -18dB) 
+* Insert a Bars & Tone tape to adjust waveform/vectorscope and audio within Broadcast range (or -18dB)
     - In some case, audio levels may need to be adjusted on a TBC
 * Eject the Bars & Tone tape and insert or thread the client tape to be captured
 * Observe the threading and press Play (if necessary)
@@ -43,12 +49,12 @@
 * In the top right-hand corner, go to **Preferences** and set **Capture Audio and Video To:** and **Capture Still Frames To:** to your project folder on the storage raid
 * While in **Preferences**, ensure that **Project Video Format** is set to the correct settings:
     - For analog tape captures:
-        - **Framerate:** 29.97 NTSC 
+        - **Framerate:** 29.97 NTSC
         - **Capture File Format:** 10 bit Uncompressed
         - **Use Dropped Frame Timecode** should be checked
     - For upscale HD captures:
         - **Framerate:** Make sure to set this according to the client’s specifications
-        - **Capture File Format:** ProRes 422 HQ 
+        - **Capture File Format:** ProRes 422 HQ
         - **Use Dropped Frame Timecode** should be checked
 * Navigate to **Blackmagic Desktop Video Setup** (should be in the dock) and ensure that your settings are correct for both video and audio set up
 * Use bars and tone tape to set levels

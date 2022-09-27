@@ -1,3 +1,9 @@
+---
+layout: page
+title: Packing Tapes
+parent: Services
+---
+
 # Packing Tapes
 
 Packing tapes at a controlled tension and speed redistributes tape pack stresses and creates an even tension during playback. For tapes with heavy cinching, windows or other pack problems, this process can be repeated as often as needed.

@@ -1,3 +1,9 @@
+---
+layout: page
+title: Video Formats
+parent: Services
+---
+
 # Video Formats
 
 ## 2" Quadraplex

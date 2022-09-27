@@ -1,6 +1,12 @@
+---
+layout: page
+title: Cleaning Decks
+parent: Services
+---
+
 # Cleaning Decks
     - Ensure deck is powered off
-    - Moisten a cloth with alcohol 
+    - Moisten a cloth with alcohol
     - Clean entire tape path, making sure that all points of contact with tape are wiped clean
     - Hold the cloth with gentle pressure against the side of tape drum and rotate the drum, cleaning heads
     - Clean edges of tape path and area between heads (though not heads themselves) with cotton-tipped applicators moistened with alcohol
@@ -13,20 +19,20 @@
 
 Museums, archives, and libraries will sometimes request an additional Digibeta copy of the digital master file. Part of the Digibeta mastering process is laying down 30 seconds of black, 1 minute of bars/tone, and 30 seconds of black before the picture begins.
 **Set-Up**
-    - Clean heads and tape path carefully; use swab to clean the rollers. 
+    - Clean heads and tape path carefully; use swab to clean the rollers.
     - Thread a BNC cable out of DIGITAL I/O Serial V/A input directly into the Blackmagic Capture Card
-    - Set Remote part of patch bay from Kona to Digibeta. 
+    - Set Remote part of patch bay from Kona to Digibeta.
     - Video Patch - Digibeta–>VDA1
     - Audio Patch - Digibeta --> RANE Mix
-    - Find a blank tape of the right length. They are stored in a filing cabinet in the tape closet. 
-    - Open Media Express and import the file you are mastering to tape. 
-    - Pack the tape by fast-forwarding and rewinding. 
+    - Find a blank tape of the right length. They are stored in a filing cabinet in the tape closet.
+    - Open Media Express and import the file you are mastering to tape.
+    - Pack the tape by fast-forwarding and rewinding.
     - Ensure the tape is wound to the beginning before laying down timecode.
 
 **Lay Black and Timecode**
-    - Switch deck to "Setup 1" by opening the control panel to reveal advance settings. Turn the deck off and back on again to activate. 
+    - Switch deck to "Setup 1" by opening the control panel to reveal advance settings. Turn the deck off and back on again to activate.
     - Set the "TG Generator" to "interior" and "preset."
-    - Press the "hold" button that is underneath the timecode panel. 
+    - Press the "hold" button that is underneath the timecode panel.
     - Set timecode to 00:58:00
         - Press "Jog" and use the knob to move between the sections of the timecode. Set the numbers by pressing "Jog" at the same time as the knob is turned.
         - Press "Set" button under timecode.
@@ -51,9 +57,9 @@ Museums, archives, and libraries will sometimes request an additional Digibeta c
     - Follow the procedures in the "Setup" section of this page.
     - Switch deck to "Setup 1"
     - On the Digibeta deck, Turn on Remote 1(9P) on
-    - In Media Express–>Edit to Tape, set In Point to 1:00:00. You shouldn't have to set out point (if you do, use time code on file). 
+    - In Media Express–>Edit to Tape, set In Point to 1:00:00. You shouldn't have to set out point (if you do, use time code on file).
     - Click Assemble button
-    - When ready to go, click the "Master" button. The tape will automatically stop when the file ends. 
+    - When ready to go, click the "Master" button. The tape will automatically stop when the file ends.
     - Check to make sure blacks, bars, and file all begin at the established in/out points.
 
 **Labeling**

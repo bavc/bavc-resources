@@ -1,3 +1,9 @@
+---
+layout: page
+title: Supported Formats
+parent: Technical Documentation
+---
+
 # Formats
 
 ## Formats We Transfer
@@ -22,6 +28,10 @@
     - MiniDV - Standard Definition
     - U-Matic 3/4"
     - VHS/S-VHS/VHS-C
+
+* Optical Media
+   - CD
+   - DVD
 
 ## Formats We Do NOT Transfer
 

@@ -1,3 +1,9 @@
+---
+layout: page
+title: Preservation Objects
+parent: Salesforce
+---
+
 # Preservation Objects
 
 ## Preservation Object Detail
@@ -26,7 +32,7 @@
 
 ## Transfer Environment
 *Complete before capture*
-* 
+*
     - **Transfer Suite:** Choose the preservation room you are working in from drop down menu
     - **Transfer Technician:** Begin typing your own name. It should appear quickly and you can chose it from the list that appears
     - **Transfer Date:** Current date
@@ -37,7 +43,7 @@
     - **Operating System Version:** Choose computer’s current OS from drop down menu. If not present, please alert a staff member
     - **Capture Hardware:** Choose from drop down menu. Black Magic 4K Extreme currently in use at all stations.
     - **Capture Software:** Choose from drop down menu
-    - **Trim Software:** Choose from drop down menu. We currently use QuickTime7 almost exclusively to trim files. 
+    - **Trim Software:** Choose from drop down menu. We currently use QuickTime7 almost exclusively to trim files.
 
 ## Video Transfer Elements
 *Complete before capture - Video*
