@@ -54,29 +54,29 @@ The reason we rip the CD as a single WAV file is because it's easier to manage a
 * Do NOT barcode CD
 * Update Intake details
 * Update as much of the following metadata fields as possible. Any of these fields can be left blank if they are unknown or unapplicable
-   * Embedded Metadata: Title
+   * **Embedded Metadata: Title**
       * Label on the tape
       * Or, if the title is clearly a subset of the label just put the title
-   * Embedded Metadata: Artist
+   * **Embedded Metadata: Artist**
       * Music or art = Main artist or musical group
       * Oral history or interview = Interviewee’s name
-   * Embedded Metadata: Date
+   * **Embedded Metadata: Date**
       * Year only = 1/1/YYYY
       * Year and month  = MM/1/YYYY
       * Year months and day = MM/DD/YYYY
       * Unknown = leave blank
-   * Embedded Metadata: Album
+   * **Embedded Metadata: Album**
       * If it’s actually an album then use the album name
       * Otherwise, use the collection name
-   * Embedded Metadata: Institution
+   * **Embedded Metadata: Institution**
       * Use the collection holder’s institutional name
-   * Embedded Metadata: Comment
+   * **Embedded Metadata: Comment**
       * Optional field, but could include any errors encountered during transfer or any other salient information
       * Mention if the tracklist noted in liner notes or on the container differs from the cue file tracklist.
       * Essentially, any information from the Technicians Notes field could go here, but it is optional
-   * Embedded Metadata: Copyright
+   * **Embedded Metadata: Copyright**
       * If the collection holder has mention specific copyright information it should be included here. This is mostly used by California evealed
-   * Technicians Notes
+   * **Technicians Notes**
       * Any errors encountered during transfer or any other salient information
       * Mention if the tracklist noted in liner notes or on the container differs from the cue file tracklist.
 
