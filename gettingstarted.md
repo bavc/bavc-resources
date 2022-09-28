@@ -27,7 +27,6 @@ rbenv init
 ```
 
 This might put out a message like this:
-
 ```
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
@@ -69,19 +68,15 @@ gem install jekyll bundler
 ```
 
 * Navigate your terminal window to the Repository Directory and run the following command
-
 ```
-bundle install --user-install
+bundle install
 ```
 
 * Now you can start the local server on your machine with the following command
-
 ```
 bundle exec jekyll serve
 ```
-
 You'll probably see something like this:
-
 ```
 Configuration file: /Users/preservation/Documents/Github/bavc-resources/_config.yml
 To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
