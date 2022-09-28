@@ -140,11 +140,11 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ## Images
 
-We've found that using the following html style text works best for GitHub pages. It's uglier than the standard markdown style, but it does the trick
+Make sure to put any images you want in the `/assets/images/` folder. Then you'll want to use the following format to insert images into a page. 
 
-`<img src="/assets/images/BAVCLogoOrange.png" alt="Alt Text Goes Here">`
+`![Alt Text Goes Here]({{site.baseurl}}/assets/images/BAVCLogoOrange.png)`
 
-<img src="/assets/images/BAVCLogoOrange.png" alt="Alt Text Goes Here">
+![Alt Text Goes Here]({{site.baseurl}}/assets/images/BAVCLogoOrange.png)
 
 
 ## Plugins
