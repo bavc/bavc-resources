@@ -33,7 +33,6 @@ This might put out a message like this:
 # the following to ~/.zshrc:
 
 eval "$(rbenv init - zsh)"
-
 ```
 
 Make sure to so what it says. In this case, you should run the command it says: `eval "$(rbenv init - zsh)"`
