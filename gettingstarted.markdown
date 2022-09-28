@@ -98,6 +98,6 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
   Server running... press ctrl-c to stop.
 ```
 
-This means that you have a local instance of the page running at !(http://127.0.0.1:4000)[http://127.0.0.1:4000]
+This means that you have a local instance of the page running at http://127.0.0.1:4000
 
-The purpose of running the local server on your machine is so that you can see the changes you're making to site. These changes will be made to the live site at !(http://bavc.github.io/bavc-resources)[http://bavc.github.io/bavc-resources] when you push them to the repo, but the local instance is as great way to test them beforehand.
+The purpose of running the local server on your machine is so that you can see the changes you're making to site. These changes will be made to the live site at http://bavc.github.io/bavc-resources when you push them to the repo, but the local instance is as great way to test them beforehand.
