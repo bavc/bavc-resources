@@ -12,7 +12,7 @@ There are generally 2 types of CDs: CD-ROM and CD-DA. CD-ROMs contain an imaged 
 
 At BAVC we have created specific workflow for ripping CD-DAs. Our preferred method is to use XLD to rip the CD to a single WAV file. Once the file is ripped, it is possible to either create just a single MP3 access file per disc, or to split the MP3 access files according to the original tracklist on the CD.
 
-The reason we rip the CD as a single WAV file is because it's easier to manage a single file. Our system has trouble keeping track of multiple files in a single record, especially if the number of files is variable like it often is with CDs. However, since our automation embeds the tracklist into the file, the original tracklist can always be extracted from the single WAV file. 
+The reason we rip the CD as a single WAV file is because it's easier to manage a single file. Our system has trouble keeping track of multiple files in a single record, especially if the number of files is variable like it often is with CDs. However, since our automation embeds the tracklist into the file, the original tracklist can always be extracted from the single WAV file.
 
 ## Required Software
 
@@ -42,7 +42,7 @@ The reason we rip the CD as a single WAV file is because it's easier to manage a
       * ✅ Automatically open disc upon insertion
       * All other fields are optional, set them as you'd like
    * You can use this image for reference:
-      * ![XLD Options](/assets/images/XLD-Options.png)
+      * ![XLD Options](assets/images/XLD-Options.png)
    * Insert CD
    * Make sure you rip as a single file!
 
