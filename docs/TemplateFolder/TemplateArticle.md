@@ -142,9 +142,9 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 We've found that using the following html style text works best for GitHub pages. It's uglier than the standard markdown style, but it does the trick
 
-`<img src="/assets/images/BAVCLogoOrange.png" alt="Alt Text Goes Here"`
+`<img src="/assets/images/BAVCLogoOrange.png" alt="Alt Text Goes Here">`
 
-<img src="/assets/images/BAVCLogoOrange.png" alt="Alt Text Goes Here"
+<img src="/assets/images/BAVCLogoOrange.png" alt="Alt Text Goes Here">
 
 
 ## Plugins
