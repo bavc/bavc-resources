@@ -25,7 +25,8 @@ brew install rbenv
 ```
 rbenv init
 ```
-This might put out a message like this:
+* This might put out a message like this:
+
 ```
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
@@ -33,7 +34,10 @@ This might put out a message like this:
 eval "$(rbenv init - zsh)"
 ```
 
-Make sure to so what it says. In this case, you should run the command it says: `eval "$(rbenv init - zsh)"`
+* Make sure to so what it says. In this case, you should run the command it says:
+```
+eval "$(rbenv init - zsh)"
+```
 
 * Setup your terminal to start rbenv on open:
 ```
