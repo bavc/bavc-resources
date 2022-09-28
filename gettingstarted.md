@@ -25,7 +25,6 @@ brew install rbenv
 ```
 rbenv init
 ```
-
 This might put out a message like this:
 ```
 # Load rbenv automatically by appending
