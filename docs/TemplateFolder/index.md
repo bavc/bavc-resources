@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Salesforce
+title: Template Folder
 has_children: true
 ---
 {:toc}
