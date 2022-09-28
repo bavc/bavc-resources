@@ -140,16 +140,11 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ## Images
 
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+We've found that using the following html style text works best for GitHub pages. It's uglier than the standard markdown style, but it does the trick
 
-Like links, Images also have a footnote style syntax
+`<img src="/assets/images/BAVCLogoOrange.png" alt="Alt Text Goes Here"`
 
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+<img src="/assets/images/BAVCLogoOrange.png" alt="Alt Text Goes Here"
 
 
 ## Plugins

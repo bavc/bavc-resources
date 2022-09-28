@@ -42,7 +42,7 @@ The reason we rip the CD as a single WAV file is because it's easier to manage a
       * ✅ Automatically open disc upon insertion
       * All other fields are optional, set them as you'd like
    * You can use this image for reference:
-      * ![XLD Options](../assets/images/XLD-Options.png)
+      * <img src="/assets/images/XLD-Options.png" alt="XLD Options" class="inline"/>
    * Insert CD
    * Make sure you rip as a single file!
 
