@@ -5,7 +5,7 @@ parent: Template Folder
 ---
 
 
-# h1 Heading 8-)
+# h1 Heading 8-) :->
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading
@@ -140,7 +140,7 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ## Images
 
-Make sure to put any images you want in the `/assets/images/` folder. Then you'll want to use the following format to insert images into a page. 
+Make sure to put any images you want in the `/assets/images/` folder. Then you'll want to use the following format to insert images into a page.
 
 `![Alt Text Goes Here]({{site.baseurl}}/assets/images/BAVCLogoOrange.png)`
 
