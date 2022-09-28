@@ -85,7 +85,7 @@ The reason we rip the CD as a single WAV file is because it's easier to manage a
 * Check log file for track number, any errors
    * If there are errors, Mark file as review in Salesforce and check the file’s spectrogram for an obvious errors
    * If no errors are audible in the file or clearly visible in the spectrogram you should note any errors mentioned in the log in the Technicians Note, mark the file as pass and move on.
-* Run the `cdEngine.py` script on a folder containing all folders that need to be processed. Check to ensure metadata is uploaded on Salesforce
+* Run the [`cdEngine.py`](https://github.com/bavc/videomachine/blob/master/cdEngine.py) script on a folder containing all folders that need to be processed. Check to ensure metadata is uploaded on Salesforce
    * Run the script with the following command:
    * `cdEngine.py -i /Path/To/Folder`
    * It is also possible to run the `cdEngine.py` script on a single folder containing the files for a single CD if you’d like.
@@ -167,3 +167,10 @@ Because CDs often come in large numbers, it’s easier to update the QC records 
    * **Quality Control Status**
       * “Pass”
       * This is the most important field, since it determines the QC status of the record.
+
+### Ripping CDs Outside of BAVC
+
+If you plan to rip CDs at an institution outside of BAVC you can follow most of the main steps. You'll still want to use XLD, but you won't be using Salesforce at all to handle the metadata. Instead of using `cdEngine.py`, which by design needs to be connected to salesforce, you can use [`simple_cd.py`](https://github.com/bavc/videomachine/blob/master/simple_cd.py), which works the same way, but allows the user to manually enter any embedded metadata.
+
+Run the script like this:
+```simple_cd.py -i /Path/To/Folder```
