@@ -79,7 +79,7 @@ There are generally 2 types of CDs: CD-ROM and CD-DA. CD-ROMs contain an imaged 
 * Check log file for track number, any errors
    * If there are errors, Mark file as review in Salesforce and check the file’s spectrogram for an obvious errors
    * If no errors are audible in the file or clearly visible in the spectrogram you should note any errors mentioned in the log in the Technicians Note, mark the file as pass and move on.
-* Run the `cdEngine.py` script on a folder containing all folders that need to be processed on all folders. Check to ensure metadata is uploaded on Salesforce
+* Run the `cdEngine.py` script on a folder containing all folders that need to be processed. Check to ensure metadata is uploaded on Salesforce
    * Run the script with the following command:
    * `cdEngine.py -i /Path/To/Folder`
    * It is also possible to run the `cdEngine.py` script on a single folder containing the files for a single CD if you’d like.
