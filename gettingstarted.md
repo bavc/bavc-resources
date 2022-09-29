@@ -7,7 +7,7 @@ nav_order: 2
 
 # Getting Started with a GitHub Documentation Page!
 
-## Installing the necessary software on Mac OS
+## Installing Homebrew and Github on Mac OS
 
 * Install Homebrew
 ```
@@ -17,6 +17,14 @@ nav_order: 2
 ```
 brew install git
 ```
+
+## Cloning GitHub Repo to your local computer
+
+This can be done either using the Git command line tool `git` or by using the GitHub desktop tool. The GitHub repo lives [here](https://github.com/bavc/bavc-resources). Use your [preferred method](https://www.youtube.com/watch?v=CKcqniGu3tA) to clone the repo to your local drive. You'll eventually need to navigate your terminal window to this repo using the `cd` command, so make sure you clone the repo somewhere that is easily accessible. 
+
+
+## Installing the rest of the software needed on Mac OS
+
 *  Install [rbenv](https://github.com/rbenv/rbenv#installation)
 ```
 brew install rbenv
@@ -70,7 +78,11 @@ gem update --system
 gem install jekyll bundler
 ```
 
-* Navigate your terminal window to the Repository Directory and run the following command
+## Getting a local intance of the website running on your local server
+
+* Navigate your terminal window to the Repository Directory using the `cd` command
+
+* Run the following command
 ```
 bundle install
 ```
