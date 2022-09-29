@@ -10,7 +10,7 @@ parent: Technical Documentation
 
 * Power up the SAN by pressing the power button on the front right-hand side of the server. Note, the SAN should be plugged into a UPS ideally.
 * Wait about 15 minutes for things to start up
-* Go to the SAN management GUI at:https://192.168.253.61:8088). Login credentials can be found on 1Password
+* Go to the SAN management GUI at: [https://192.168.253.61:8088](https://192.168.253.61:8088). Login credentials can be found on 1Password
 * Once logged in, go to the VM (Virtual Machine) Tab on the right side of the browse window. If the tab doesn't appear, wait 5 to 10 minutes and refresh the page.
 * Click the VM icon at the bottom of the screen (image attached) to enter the View and Management control panel
 * ![VM Button]({{site.baseurl}}/assets/images/VM_Button.png)
@@ -33,7 +33,7 @@ parent: Technical Documentation
 ## PresRAID Startup
 
 * Power up the PresRAID by pressing the power button on the front left-hand side of the server
-  _Note: the SAN should be plugged into a UPS ideally_
+  _Note: the PresRAID should be plugged into a UPS ideally_
 * Wait about 15 minutes for things to start up
 
 ## PresRAID Shutdown
