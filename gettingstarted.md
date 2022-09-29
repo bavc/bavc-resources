@@ -72,11 +72,14 @@ rbenv global 2.7.2
 ```
 gem update --system
 ```
+*note: you might need to run this with `sudo` if you get permissions errors*
 
 * Install the jekyll and bundler gems.
 ```
 gem install jekyll bundler
 ```
+*note: you might need to run this with `sudo` if you get permissions errors*
+
 
 ## Getting a local intance of the website running on your local server
 
@@ -103,11 +106,11 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
        Jekyll Feed: Generating feed for posts
                     done in 4.72 seconds.
  Auto-regeneration: enabled for '/Users/preservation/Documents/Github/bavc-resources'
-    Server address: http://127.0.0.1:4000
+    Server address: http://127.0.0.1:4000/bavc-resources/
   Server running... press ctrl-c to stop.
 ```
 
-This means that you have a local instance of the page running at [http://127.0.0.1:4000](http://127.0.0.1:4000)
+This means that you have a local instance of the page running at [http://127.0.0.1:4000/bavc-resources/](http://127.0.0.1:4000/bavc-resources/)
 
 The purpose of running the local server on your machine is so that you can see the changes you're making to site. These changes will be made to the live site at [http://bavc.github.io/bavc-resources](http://bavc.github.io/bavc-resources) when you push them to the repo, but the local instance is as great way to test them beforehand.
 
@@ -143,4 +146,4 @@ Articles all live in the `/docs/` folder, which is located in the root level of 
 
 ### Adding a new subfolder / categeory
 
-To add a new subfolder or category, you'll need to add a new subfolder to the `docs` folder. You'll also need to create a new `index.md` file inside of that folder. The `index.md` file is critical, as it tells the website that this new folder corresponds to a new category, and creates a landing page for that category. To make creating a new folder easier, you can just duplicate and rename the `TemplateFolder` directory. Just make sure you rename the folder, and rename `title` info in the header of the `index.md` file within that folder. 
+To add a new subfolder or category, you'll need to add a new subfolder to the `docs` folder. You'll also need to create a new `index.md` file inside of that folder. The `index.md` file is critical, as it tells the website that this new folder corresponds to a new category, and creates a landing page for that category. To make creating a new folder easier, you can just duplicate and rename the `TemplateFolder` directory. Just make sure you rename the folder, and rename `title` info in the header of the `index.md` file within that folder.
