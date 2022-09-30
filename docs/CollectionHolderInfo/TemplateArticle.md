@@ -8,7 +8,7 @@ parent: Information for Collection Holders
 
 ## How to Properly Pack Your Tapes
 
-* The safest way to ship tapes is to use two boxes: Pack the tapes into a small box, then pack that small box into a larger box with packaging material between the boxes.
+* The safest way to ship tapes is to use two boxes: Pack the tapes into a small box, then pack that small box into a larger box with packaging material between the boxes. Most people use archival boxes for the smaller inner box. 
 
 * Use sturdy boxes and high quality packaging material when packing your tape. Thick bubble-wrap is the best packaging material. You do not need to wrap every tape individually in bubble wrap, as long as there sufficient bubble wrap between the tapes and the box they are packed in.
 
