@@ -359,3 +359,47 @@ for i in *.mov ; do dvrescue "$i" -x "$i.dvrescue.xml" -c "$i.dvrescue.scc" -s "
 ```
 ***
 ## Transcode Engine
+Transcode Engine is a python script that lives on the SAN. The path is:
+```
+/Volumes/SymplyUltra/Scripts/transcodeEngine.py
+```
+_Be sure to use this instance and not the script on your desktop - The script on the SAN will be the most up to date._
+
+You can run the script with the -h flag for help, you'll see the following information:
+```
+/Volumes/SymplyUltra/Scripts/transcodeEngine.py  -h
+usage: transcodeEngine.py [-h] [-i I] [-o O] [-c C] [-mkv] [-dv] [-nsf]
+
+Harvests Mediainfo of input file or files in input directory
+
+options:
+  -h,   --help          show this help message and exit
+  -i I, --input I       the path to the input directory or files
+  -o O, --output O      the output file path (optional)
+  -c C, --csvname C     the name of the csv file (optional)
+  -mkv, --Matroska      Allows input file type to be mkv rather than default
+                        mov
+  -dv, --DV             Allows input file type to be dv rather than default mov. Processes as 720x480 rather than 720x486
+  -nsf, --NoSalesForce  Turns off 'No SalesForce' flag, which will avoid syncing the CSV to SF automatically. By default this script will sync CSV files to SalesForce
+  ```
+  Other than -h for help, there are three other input flag: -i, -o, and -c
+
+  * -i is used to specify the file or directory being processed. If you choose a file, only that file will be processed. If you choose a directory, all files with the extension ".mov" will be processed. This includes V210 files and ProRes files. No other codecs are fully supported at the moment.
+
+    Example:
+    ```
+    /Volumes/SymplyUltra/Scripts/transcodeEngine.py -i [Path/To/Input/Folder]
+    ```
+  * -o is used to specify the output path of the resulting CSV file. If not specified, the output path will be the same directory as the input file (if processing a file), or the input directory (if processing a directory).
+
+    Example:
+    ```
+    /Volumes/SymplyUltra/Scripts/transcodeEngine.py -i [Path/To/Input/Folder] -o [Path/To/Output/Folder]
+    ```
+  * -c is used to specify the filename for the resulting CSV file. If not specified, the output filename will be the same as the input file in the format inputfile.mov.csv (if processing a file), or mediainfo.csv (if processing a directory)
+
+    Example:
+    ```
+    /Volumes/SymplyUltra/Scripts/transcodeEngine.py -i [Path/To/Input/Folder] -o [Path/To/Output/Folder] -c OutputFilename.csv
+    ```
+***
