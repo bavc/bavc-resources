@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Shipping Your Tapes to BAVC
-parent: Hard Drives and Digital Storage
+title: Hard Drives and Digital Storage
+parent: Information for Collection Holders
 ---
 
 # Hard Drives and Digital Storage
@@ -16,4 +16,4 @@ You can estimate size you need if you know the duration of the your tapes and wh
 
 If you'd like a more accurate estimate you can reach out to us and we will create one for you.
 
-Once you have your size estimate, make sure you that you won't fill your hard drive above 85% capacity. 
+Once you have your size estimate, make sure you that you won't fill your hard drive above 85% capacity.
