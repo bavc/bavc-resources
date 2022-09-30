@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Template Article
-parent: Template Folder
+title: Shipping Your Tapes to BAVC
+parent: Information for Collection Holders
 ---
 
 # Shipping Your Tapes to BAVC
@@ -10,7 +10,7 @@ parent: Template Folder
 
 * The safest way to ship tapes is to use two boxes: Pack the tapes into a small box, then pack that small box into a larger box with packaging material between the boxes.
 
-* Use sturdy boxes and high quality packaging material when packing your tape. Thick bubble-wrap is the best packaging material. You do not need to wrap every tape individually in bubble wrap, as long as there sufficient bubble wrap
+* Use sturdy boxes and high quality packaging material when packing your tape. Thick bubble-wrap is the best packaging material. You do not need to wrap every tape individually in bubble wrap, as long as there sufficient bubble wrap between the tapes and the box they are packed in.
 
 * Do NOT use packing peanuts! They make a mess and do not sufficiently protect tapes during shipping.
 
@@ -20,13 +20,15 @@ parent: Template Folder
 
 * Alway print two shipping labels. Affix one label to the outside of the box, and place the other in the box. That way if the label affixed to the outside falls off, there will be another inside.
 
+* Try to keep any box under 30 pounds. A little more is ok, but the heavier the box the more likely it will be mishandled or damaged during shipping.
+
 ## Be Careful What Day You Ship
 
 At BAVC we ship all materials via FedEx 2-Day Express unless asked otherwise. We recommend you do so as well. With 2-day shipping it's best to ship between Monday and Wednesday, so that the tapes will arrive the same week they are shippined. If shipped later than the last pickup time on Wednesday, the tapes will site in a warehouse over the weekend, or even possibly be delivered over the weeked while we are not in the office. To avoid these issues, make sure to ship between Monday and Wednedsay.
 
 ## We Can Help You Ship!
 
-If you need help making a shipping label, just let us know! We can easily create a shipping label for you, which can make shipping much esier
+If you need help making a shipping label, just let us know! We can easily create a shipping label for you, which can make shipping much easier for you. If you want us to create a label for you please send us the weight and dimensions (Width x Length x Height) of the box.
 
 ## Check Your Tapes For Mold
 

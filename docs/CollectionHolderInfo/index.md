@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Template Folder
+title: Information for Collection Holders
 has_children: true
 ---
 {:toc}
