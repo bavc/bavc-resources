@@ -297,6 +297,14 @@ for file in *.wav ; do ffmpeg -i "$file" -c:a libmp3lame -b:a 320k -write_xing 0
 ```
 for file in *.wav ; do ffmpeg -i "$file" -c:a libmp3lame -b:a 320k -write_xing 0 -ac 2 -af "pan=stereo|c0=c0+c1|c1=c0+c1" "${file%.*}_access.mp3" ; done
 ```
+* Convert an .mov file to a .wav file
+```
+ffmpeg -i input.mov -map 0:a -c:a pcm_s16le -ar 48000 output.wav
+```
+* Convert an .mov DV file to a .wav file
+```
+ffmpeg -i input.mov -map 0:a:0 -c:a pcm_s16le -ar 48000 output.wav
+```
 ***
 ## Mediainfo
 * Salesforce syntax for Filename, Duration, and FileSize
