@@ -1,7 +1,7 @@
 ---
 layout: page
 title: MPEGStreamclip Transcoding
-has_children: Technical Documentation
+parent: Technical Documentation
 ---
 {:toc}
 
