@@ -13,8 +13,8 @@ Occasionally, clients have specified file formats for derivatives. This article 
 
 * Open MPEGStreamclip
 * Open the **List** dropdown menu
-* Click **"To Batch"**
-* Click **"Add Files"** in Batch List window, and select files to be transcoded
+* Click **To Batch**
+* Click **Add Files** in Batch List window, and select files to be transcoded
 * Select **Export to QuickTime** in the task window
 * Select destination for derivatives (for instance, a Mezzanine folder within the Project folder)
 * An **Options** menu will appear, click **Presets** on bottom left
