@@ -42,10 +42,10 @@ The reason we rip the CD as a single WAV file is because it's easier to manage a
       * ✅ Automatically open disc upon insertion
       * All other fields are optional, set them as you'd like
    * You can use this image for reference:
-      * <img src="/assets/images/XLD-Options.png" alt="XLD Options" class="inline"/>
+      * ![XLD Options]({{site.baseurl}}/assets/images/XLD-Options.png)
    * Insert CD
    * Second window will pop up. Make sure option in top left says *Save as a single file (+ cue)*
-   * <img src="/assets/images/XLD-ripping.png" alt="XLD Ripping" class="inline"/>
+      * ![XLD Ripping]({{site.baseurl}}/assets/images/XLD-ripping.png)
    * Make sure you rip as a single file!
 
 
@@ -54,29 +54,29 @@ The reason we rip the CD as a single WAV file is because it's easier to manage a
 * Do NOT barcode CD
 * Update Intake details
 * Update as much of the following metadata fields as possible. Any of these fields can be left blank if they are unknown or unapplicable
-   * Embedded Metadata: Title
+   * **Embedded Metadata: Title**
       * Label on the tape
       * Or, if the title is clearly a subset of the label just put the title
-   * Embedded Metadata: Artist
+   * **Embedded Metadata: Artist**
       * Music or art = Main artist or musical group
       * Oral history or interview = Interviewee’s name
-   * Embedded Metadata: Date
+   * **Embedded Metadata: Date**
       * Year only = 1/1/YYYY
       * Year and month  = MM/1/YYYY
       * Year months and day = MM/DD/YYYY
       * Unknown = leave blank
-   * Embedded Metadata: Album
+   * **Embedded Metadata: Album**
       * If it’s actually an album then use the album name
       * Otherwise, use the collection name
-   * Embedded Metadata: Institution
+   * **Embedded Metadata: Institution**
       * Use the collection holder’s institutional name
-   * Embedded Metadata: Comment
+   * **Embedded Metadata: Comment**
       * Optional field, but could include any errors encountered during transfer or any other salient information
       * Mention if the tracklist noted in liner notes or on the container differs from the cue file tracklist.
       * Essentially, any information from the Technicians Notes field could go here, but it is optional
-   * Embedded Metadata: Copyright
+   * **Embedded Metadata: Copyright**
       * If the collection holder has mention specific copyright information it should be included here. This is mostly used by California evealed
-   * Technicians Notes
+   * **Technicians Notes**
       * Any errors encountered during transfer or any other salient information
       * Mention if the tracklist noted in liner notes or on the container differs from the cue file tracklist.
 
@@ -85,9 +85,13 @@ The reason we rip the CD as a single WAV file is because it's easier to manage a
 * Check log file for track number, any errors
    * If there are errors, Mark file as review in Salesforce and check the file’s spectrogram for an obvious errors
    * If no errors are audible in the file or clearly visible in the spectrogram you should note any errors mentioned in the log in the Technicians Note, mark the file as pass and move on.
-* Run the `cdEngine.py` script on a folder containing all folders that need to be processed. Check to ensure metadata is uploaded on Salesforce
-   * Run the script with the following command:
-   * `cdEngine.py -i /Path/To/Folder`
+* Run the [`cdEngine.py`](https://github.com/bavc/videomachine/blob/master/cdEngine.py) script on a folder containing all folders that need to be processed. Check to ensure metadata is uploaded on Salesforce
+   * Run the script with the following command to create a single MP3 from the rippped WAV file:
+      - `cdEngine.py -i /Path/To/Folder`
+   * Run the script with the following command to create an MP3 for every track on the original CD file:
+      - `cdEngine.py -i /Path/To/Folder -s`
+   * Run the script with the following command to create an MP3 for every track on the original CD file, along with a single MP3 containing all of the CD content:
+      - `cdEngine.py -i /Path/To/Folder -s -m`
    * It is also possible to run the `cdEngine.py` script on a single folder containing the files for a single CD if you’d like.
 
 ## Quality Control
@@ -167,3 +171,14 @@ Because CDs often come in large numbers, it’s easier to update the QC records 
    * **Quality Control Status**
       * “Pass”
       * This is the most important field, since it determines the QC status of the record.
+
+### Ripping CDs Outside of BAVC
+
+If you plan to rip CDs at an institution outside of BAVC you can follow most of the main steps. You'll still want to use XLD, but you won't be using Salesforce at all to handle the metadata. Instead of using `cdEngine.py`, which by design needs to be connected to salesforce, you can use [`simple_cd.py`](https://github.com/bavc/videomachine/blob/master/simple_cd.py), which works the same way, but allows the user to manually enter any embedded metadata.
+
+* Run the script with the following command to create a single MP3 from the rippped WAV file:
+   - `simple_cd.py -i /Path/To/Folder`
+* Run the script with the following command to create an MP3 for every track on the original CD file:
+   - `simple_cd.py -i /Path/To/Folder -s`
+* Run the script with the following command to create an MP3 for every track on the original CD file, along with a single MP3 containing all of the CD content:
+   - `simple_cd.py -i /Path/To/Folder -s -m`
