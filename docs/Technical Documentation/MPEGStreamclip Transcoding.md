@@ -20,15 +20,6 @@ Occasionally, clients have specified file formats for derivatives. This article 
 * An **Options** menu will appear, click **Presets** on bottom left
 * Select **NYU-DV50**
     * This is the preset for NYU mezzanine derivatives. The settings are as follows:
-        * Compression: Apple DVCPRO50 - NTSC
-        * Quality: 50%
-        * Sound: Uncompressed, Stereo, Auto (256 kbps)
-        * Frame Size: 720 x 480 (DV-NTSC)
-        * Interlaced Scaling
-        * Field Dominance: Lower Field First
-        * Rotation: No
-        * Zoom: 100%, X/Y: 1, Center: 0, 0
-        * Cropping (Yes): Top: 2, Left: 0, Bottom: 4, Right: 0, Source (dropdown)
     ![NYU DV-50 MPEGStreamclip settings](/bavc-resources/assets/images/MPEGStreamclip.png)
 * Select **To Batch**
 * Files will appear in Batch List window, select **Go**
