@@ -29,6 +29,7 @@ Occasionally, clients have specified file formats for derivatives. This article 
         * Rotation: No
         * Zoom: 100%, X/Y: 1, Center: 0, 0
         * Cropping (Yes): Top: 2, Left: 0, Bottom: 4, Right: 0, Source (dropdown)
+    ![NYU DV-50 MPEGStreamclip settings](/bavc-resources/assets/images/MPEGStreamclip.png)
 * Select **To Batch**
 * Files will appear in Batch List window, select **Go**
 * New window will appear with a status bar, indicating that files are being transcoded
