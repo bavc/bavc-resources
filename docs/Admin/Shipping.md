@@ -31,7 +31,7 @@ parent: Admin
 * Check and see if a Shipment Profile already exists, if so that makes filling out the rest easier.
 * Here's how to fill out the sections:
   * 1) From:
-  * Morgan Oscar Morel, 2727 Mariposa St FL 2, San Francisco, California, 94110, United States
+    * Morgan Oscar Morel, 2727 Mariposa St FL 2, San Francisco, California, 94110, United States
   * 2) To:
     * The shipping address of the client
     * You can find this in Salesforce. Go to the opportunity, then the quote, and find the shipping address. If it's empty ask the Pres Director for help
@@ -45,15 +45,15 @@ parent: Admin
     * Your reference: Paste in the quote number associated with the opportunity.
     * Pickup/Drop-off
     * Make sure to schedule a pickup unless otherwise requested. It's best to ship a few things at once if possible because the pickups cost us $10.
-    * Shipment Notifications
-      * Sender Email: morgan@bavc.org
-      * Recipient Email: The the client's email from Salesforce
-      * Check the following boxes
-        * Ship
-        * Pickup (unless dropping off package at FedEx location)
-        * Delivery
+  * 5) Shipment Notifications
+    * Sender Email: morgan@bavc.org
+    * Recipient Email: The the client's email from Salesforce
+    * Check the following boxes
+      * Ship
+      * Pickup (unless dropping off package at FedEx location)
+      * Delivery
 * With that all filled out you can hit "Ship"
 * Double check the label to make sure everything is ok.
 * Before printing make sure that you have a FedEx printer label loaded into the printer.
 * FedEx printer labels can be used. In order to have them oriented properly please load the label sheets with the FedEx logo Up (facing you) and on the right side of the sheet.
-* Print a second label and include it in the box. That way if the label falls off the box there is a second inside the box. 
+* Print a second label and include it in the box. That way if the label falls off the box there is a second inside the box.
