@@ -20,6 +20,7 @@ Occasionally, clients have specified file formats for derivatives. This article 
 * An **Options** menu will appear, click **Presets** on bottom left
 * Select **NYU-DV50**
     * This is the preset for NYU mezzanine derivatives. The settings are as follows:
+    
     ![NYU DV-50 MPEGStreamclip settings](/bavc-resources/assets/images/MPEGStreamclip.png)
 * Select **To Batch**
 * Files will appear in Batch List window, select **Go**
