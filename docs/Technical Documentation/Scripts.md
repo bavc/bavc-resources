@@ -403,3 +403,150 @@ options:
     /Volumes/SymplyUltra/Scripts/transcodeEngine.py -i [Path/To/Input/Folder] -o [Path/To/Output/Folder] -c OutputFilename.csv
     ```
 ***
+## Salesforce Metadata Python (out of date)
+Salesforce records can be updated using the CSV created by the transcode engine and a python script. Here is how you do it!
+### Setup
+* make sure you have python3 installed. run the following command `brew install python3`
+* Install the simple salesforce python library with the following command: `sudo pip3 install simple-salesforce`
+  * You will need to type in the password after running this command
+* Download sfsync.py and config.py from the preservation Team Drive (Inventory -> Software -> Scripts)
+* Drop these scripts into the  ~/Documents/FFMPEG folder on your computer.
+  * These scripts can live anywhere, but they must be in the same folder. These instructions will assume that the files are in ~/Documents/FFMPEG
+* Note: config.py has private user/password data in it. DO NOT SHARE this file with people online
+
+### Running
+* You can run the script with the following command: `python3 ~/Documents/FFMPEG/sfsync.py [path/to/mediainfo.csv]`
+* You can actually run as many CSV files as you want in a single command! `python3 ~/Documents/FFMPEG/sfsync.py [path/to/01mediainfo.csv path/to/02mediainfo.csv path/to/03mediainfo.csv path/to/04mediainfo.csv]`
+
+(((Note: Anything in brackets is a placeholder for the folder or file - [path/to/example]))
+***
+## Salesforce Metadata CSV Update
+*With the new updates that use Python, the skyvia method is now out of date. This portion is still here in case the Skyvia portion needs to be used, but it’s deprecated.*
+
+The Transcode Engine script creates a file named mediainfo.csv when it's finished running. This CSV file contains the Digital Object Elements metadata for each .mov file that was processed. There is a script that runs in the background that will update the Digital Object Elements in a Salesforce Preservation Objects with the information contained in these CSV files, and it uses the Barcode Number to match the data up with the correct record.
+
+It reads the CSV files from a Shared Google Drive folder. That folder lives in the preservation@bavc.org account's google drive. This folder is accessible from every Capture Station using the Backup and Sync from Google application. Each computer should have the folder accessible via finder, like this:
+
+`![Google Drive Salesforce]({{site.baseurl}}/assets/images/Google_Drive_SalesForce.png)`
+
+Every file in this folder will be synced daily to SalesForce at exactly 11:45 a.m. In order to sync up the CSV file you just created, you must rename it to match the following naming convention: XXmediainfo.csv (where XX is a number 01 thru - 09). Each staff member should have one or two filenames reserved for their individual use, in order to keep people from overwriting each other's files.  If you don't remember which numbers are yours ask your coworkers!
+
+Drag the renamed CSV file into the SalesForceCSV folder to overwrite the existing file; When prompted, select "Replace".
+
+Wait until 11:45 a.m. rolls around again to ensure that the record has updated, or...
+
+### Manually Run The Update
+
+It's possible to run the update manually, rather than wait for the automatic sync at 11:45 a.m.  Go the Skyvia web app at https://app.skyvia.com/ (login information available in the Accounts and Login page) and to the following
+
+* Click on the Integration tab on the left
+* Click on the Digital Object Elements Update item
+* Click the Run button on the top-right side of the page
+* Be patient! It can take a few minutes to run
+
+### Known Issues!
+
+There is a major known issue that can cause problems. If a single tape has multiple parts, and there is a file for each part, you'll need to edit the CSV file to remove all but one part. We typically fill the Salesforce record with Digital Object Elements fields with the data from Part01 of a tape. So, you'll need to go into the CSV file and remove the rows that correspond to the other parts. You can edit the CSV files in TextEdit .
+***
+
+## SAN
+If the SAN gets unmounted you can mount it with the following command:
+```
+sudo xsanctl mount SymplyUltra
+```
+you'll be prompted for a password, it's preservation
+***
+## Github
+We use GitHub to develop all of our open source projects such as QCTools, SignalServer, and AVAA.
+
+### Getting Started
+
+If you have Homebrew, then you already have git installed on your local machine. You can also install git by itself from here: http://git-scm.com/download/mac.
+
+Next, you should create your GitHub account here: https://github.com/.
+
+### Basic Use
+
+Here are some very basic CLI steps for updating GitHub projects via Terminal.
+
+  1. Login to GitHub and fork the original repository (of the application you want to make changes too) to your remote repository
+  `![GitHub Fork]({{site.baseurl}}/assets/images/GitHubFork.png)`
+  2. Clone your remote repository to your local computer. You can do this in GitHub, or you can use a command line:
+  ```
+  git clone [remote repository url]
+  ```
+  3. In your local repo, open the .md file you would like to edit in Atom [Atom](https://atom.io/) or another text editor
+  4. Make you edits, save and close the file
+  5. In Terminal, cd into your local repository
+  ```
+  cd [path/to/repository]
+  ```
+  6. Now add the the change to a temporary staging area
+  ```
+  git add [filename]
+  ```
+  7. Commit the change to your local repository and add a message - the more specific the better
+  ```
+  git commit -m "changed the title from preservation to av preservation"  
+  ```
+  8. Now you are ready to send the change and the commit to your remote repository (the one on GitHub).
+  ```
+  git push origin master
+  ```
+  9. Finally, it's time to send the proposed changes to administrators of the original repository. In GitHub, go to the Pull Request tab and click the New Pull Request button
+  `![GitHub Pull Request]({{site.baseurl}}/assets/images/GitHubFork.png)`
+  10. Follow the steps of the Pull Request and make sure your comments are descriptive and specific. It will be sent to the GitHub community. If an administrator approves, they will merge the changes into the repository. If they do not immediately approve, they will begin a dialogue about the change.
+#### Resources
+Here is a great guide with more explanatory notes about checkouts, branches, and other features: http://rogerdudler.github.io/git-guide/.
+***
+## Rename
+### General Use
+Rename is a super useful tool for renaming files and folders in bulk. It's pretty tricky to use, but here's a quick explanation of a simple use case
+
+  * Installation is simple, just run `brew install rename`
+  * In this example we will rename all files with the     extension .jpeg to have the extension .jpg instead.
+  * First you need to `cd` into a the folder you want to rename.
+  * Then run this command
+  ```
+  rename -n 's/\.jpeg/\.jpg/' *
+  ```
+  * The `-n` flag will run in dry-run mode,  meaning it will tell you what it will do before doing it.
+  * `s/\.jpeg/\.jpg/` tells rename to look at the standard in, and replace ".jpeg" with ".jpg" in any file it finds
+  * the `*` tells rename to look at every file in the working directory.
+  * Once you run the command in dry-run mode it'll show you what changes it will make. If you're happy with that run the command again without the -n flag and it'll actually rename the files:
+  ```
+  rename 's/\.jpeg/\.jpg/' *
+  ```
+The above example just runs on files in a single folder. If you want to run the command on a bunch of recursive directories you'll need to use a more complex command:
+  * First you need to `cd` into a the folder you want to rename.
+  * Then run this command
+  ```
+  find . -type f -name '*.jpeg' -print0 | xargs -0 rename -n 's/\.jpeg/\.jpg/
+  ```
+  * This part: `find . -type f -name '*.jpeg' -print0 | xargs -0` performs a find in the working directory for any file ending with ".jpeg". Then it passes the file path to rename, which runs in dry-run mode
+  * If you're happy with what dry-run mode comes up with, you can run it for real without the -n flag
+  ```
+  find . -type f -name '*.jpeg' -print0 | xargs -0 rename 's/\.jpeg/\.jpg/
+  ```
+In both examples we're just replacing .jpeg with .jpeg with this command: `s/\.jpeg/\.jpg/`
+
+Keep in mind you can replace any string with any other string. It's very useful!
+
+### Removing Barcodes
+
+Rename can very easily remove barcodes from files names. However, it's **very dangerous** because you can easily mangle files names with this command.
+
+  * First, you need to make sure you remove all hidden files from the working directory.
+  * `cd` into whatever directory you want to rename the files in
+  * Run this command to see every hidden file in the directory `find . -name ".*"`
+  * If what you see looks like just hidden files, then run this command to remove hidden files. BE SUPER CAREFUL DON'T MESS THIS UP OR YOU CAN REMOVE EVERY FILE IN THE DIRECTORY.
+  ```
+  find . -name ".*" -exec rm  -vR {} \;
+  ```
+  * From here you can run the following command to remove the barcodes (first 12 characters) from every file in the folder
+  ```
+  rename -n 's/.{12}(.*)/$1/' *
+  ```
+  * That command actually runs in dry-run mode. Remove the -n to run it for real if you're happy with the projected results of the dry-run
+
+  You can read the manual [here](http://plasmasturm.org/code/rename/)
