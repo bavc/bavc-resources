@@ -353,11 +353,12 @@ It's possible to merge multiple transfers of a tape into a single file to remove
 ```
 dvrescue [path/to/file1.dv] [path/to/file2.dv] [path/to/file3.dv] -m [path/to/OutputFile.dv]
 ```
-Like iwth QCTools, it's possible to generate DVRescue reports using the command line. This string will create an .xml report for every .mov file in the current directory. This will make it so that the DVRescue GUI opens instantly. To run this command you first need to change the current directory of terminal to the target folder using `cd /path/to/directory/`
+Like with QCTools, it's possible to generate DVRescue reports using the command line. This string will create an .xml report for every .mov file in the current directory. This will make it so that the DVRescue GUI opens instantly. To run this command you first need to change the current directory of terminal to the target folder using `cd /path/to/directory/`
 ```
 for i in *.mov ; do dvrescue "$i" -x "$i.dvrescue.xml" -c "$i.dvrescue.scc" -s "$i.dvrescue.vtt" ; done ; cowsay "done"
 ```
 ***
+
 ## Transcode Engine
 Transcode Engine is a python script that lives on the SAN. The path is:
 ```
@@ -403,6 +404,7 @@ options:
     /Volumes/SymplyUltra/Scripts/transcodeEngine.py -i [Path/To/Input/Folder] -o [Path/To/Output/Folder] -c OutputFilename.csv
     ```
 ***
+
 ## Salesforce Metadata Python (out of date)
 Salesforce records can be updated using the CSV created by the transcode engine and a python script. Here is how you do it!
 ### Setup
@@ -416,10 +418,13 @@ Salesforce records can be updated using the CSV created by the transcode engine 
 
 ### Running
 * You can run the script with the following command: `python3 ~/Documents/FFMPEG/sfsync.py [path/to/mediainfo.csv]`
-* You can actually run as many CSV files as you want in a single command! `python3 ~/Documents/FFMPEG/sfsync.py [path/to/01mediainfo.csv path/to/02mediainfo.csv path/to/03mediainfo.csv path/to/04mediainfo.csv]`
+* You can actually run as many CSV files as you want in a single command!
+ `python3 ~/Documents/FFMPEG/sfsync.py [path/to/01mediainfo.csv path/to/02mediainfo.csv path/to/03mediainfo.csv path/to/04mediainfo.csv]`
 
-(((Note: Anything in brackets is a placeholder for the folder or file - [path/to/example]))
+Note: Anything in brackets is a placeholder for the folder or file - [path/to/example]
+
 ***
+
 ## Salesforce Metadata CSV Update
 *With the new updates that use Python, the skyvia method is now out of date. This portion is still here in case the Skyvia portion needs to be used, but it’s deprecated.*
 
@@ -427,7 +432,7 @@ The Transcode Engine script creates a file named mediainfo.csv when it's finishe
 
 It reads the CSV files from a Shared Google Drive folder. That folder lives in the preservation@bavc.org account's google drive. This folder is accessible from every Capture Station using the Backup and Sync from Google application. Each computer should have the folder accessible via finder, like this:
 
-`![Google Drive Salesforce]({{site.baseurl}}/assets/images/Google_Drive_SalesForce.png)`
+![Google Drive Salesforce]({{site.baseurl}}/assets/images/Google_Drive_SalesForce.png)
 
 Every file in this folder will be synced daily to SalesForce at exactly 11:45 a.m. In order to sync up the CSV file you just created, you must rename it to match the following naming convention: XXmediainfo.csv (where XX is a number 01 thru - 09). Each staff member should have one or two filenames reserved for their individual use, in order to keep people from overwriting each other's files.  If you don't remember which numbers are yours ask your coworkers!
 
@@ -447,6 +452,7 @@ It's possible to run the update manually, rather than wait for the automatic syn
 ### Known Issues!
 
 There is a major known issue that can cause problems. If a single tape has multiple parts, and there is a file for each part, you'll need to edit the CSV file to remove all but one part. We typically fill the Salesforce record with Digital Object Elements fields with the data from Part01 of a tape. So, you'll need to go into the CSV file and remove the rows that correspond to the other parts. You can edit the CSV files in TextEdit .
+
 ***
 
 ## SAN
@@ -455,7 +461,9 @@ If the SAN gets unmounted you can mount it with the following command:
 sudo xsanctl mount SymplyUltra
 ```
 you'll be prompted for a password, it's preservation
+
 ***
+
 ## Github
 We use GitHub to develop all of our open source projects such as QCTools, SignalServer, and AVAA.
 
@@ -470,7 +478,7 @@ Next, you should create your GitHub account here: https://github.com/.
 Here are some very basic CLI steps for updating GitHub projects via Terminal.
 
   1. Login to GitHub and fork the original repository (of the application you want to make changes too) to your remote repository
-  `![GitHub Fork]({{site.baseurl}}/assets/images/GitHubFork.png)`
+  ![GitHub Fork]({{site.baseurl}}/assets/images/GitHubFork.png)
   2. Clone your remote repository to your local computer. You can do this in GitHub, or you can use a command line:
   ```
   git clone [remote repository url]
@@ -494,7 +502,7 @@ Here are some very basic CLI steps for updating GitHub projects via Terminal.
   git push origin master
   ```
   9. Finally, it's time to send the proposed changes to administrators of the original repository. In GitHub, go to the Pull Request tab and click the New Pull Request button
-  `![GitHub Pull Request]({{site.baseurl}}/assets/images/GitHubFork.png)`
+  ![GitHub Pull Request]({{site.baseurl}}/assets/images/GitHubFork.png)
   10. Follow the steps of the Pull Request and make sure your comments are descriptive and specific. It will be sent to the GitHub community. If an administrator approves, they will merge the changes into the repository. If they do not immediately approve, they will begin a dialogue about the change.
 #### Resources
 Here is a great guide with more explanatory notes about checkouts, branches, and other features: http://rogerdudler.github.io/git-guide/.
