@@ -28,7 +28,7 @@ search.previews: 3
 search_tokenizer_separator: /[\s/]+/
 #heading_anchors: true
 color_scheme: "dark"
-baseurl: "/bavc-resources" # the subpath of your site, e.g. /blog
+baseurl: "/elise-resources" # the subpath of your site, e.g. /blog
 #theme: "just-the-docs"
 aux_links:
   "BAVC Resources source on GitHub":
