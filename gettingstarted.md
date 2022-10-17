@@ -42,14 +42,17 @@ rbenv init
 eval "$(rbenv init - zsh)"
 ```
 
-* Make sure to so what it says. In this case, you should run the command it says:
-```
-eval "$(rbenv init - zsh)"
-```
-
-* Setup your terminal to start rbenv on open:
+* The above message is telling you that in order make sure that `rbenv` loads automatically you need to run the above command. This will setup your terminal to start rbenv on open. It actually puts that command in `bash_profile` which will automatically run every time you open a terminal window.
 ```
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+```
+* More recent macOS versions have very tight security around system folders. to get around this we'll need to move the installation path of all the gems to your user folder. Do that with the following commans:
+```
+echo 'GEM_HOME=$HOME/.gem' >> ~/.bash_profile
+echo 'GEM_PATH=$HOME/.gem' >> ~/.bash_profile
+```
+* The above commans tell your terminal to start rbenv and change the Gem Paths to the user-definted paths at start. This is because the `bash_profile` is just a smalls script that runs whenever you open a terminal window. Once you've run these commans you can close and reopen your terminal window to make sure that all those setup commands are run. You can also run the following `source` command to run the `bash_profile` script to run all those commands
+```
 source ~/.bash_profile
 ```
 * Check your installation (you should see a bunch of "OK"s)
@@ -72,13 +75,10 @@ rbenv global 2.7.2
 ```
 gem update --system
 ```
-*note: you might need to run this with `sudo` if you get permissions errors*
-
 * Install the jekyll and bundler gems.
 ```
 gem install jekyll bundler
 ```
-*note: you might need to run this with `sudo` if you get permissions errors*
 
 
 ## Getting a local intance of the website running on your local server
