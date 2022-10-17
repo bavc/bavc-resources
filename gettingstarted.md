@@ -46,7 +46,7 @@ eval "$(rbenv init - zsh)"
 ```
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 ```
-* More recent macOS versions have very tight security around system folders. to get around this we'll need to move the installation path of all the gems to your user folder. Do that with the following commans:
+* More recent macOS versions have very tight security around system folders. to get around this we'll need to move the installation path of all the gems to your user folder (read ![this article](https://medium.com/@morgannegagne/what-is-a-ruby-gem-1eec2684e68) for more info on what gems are). Do that with the following commans:
 ```
 echo 'GEM_HOME=$HOME/.gem' >> ~/.bash_profile
 echo 'GEM_PATH=$HOME/.gem' >> ~/.bash_profile
