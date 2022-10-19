@@ -55,6 +55,10 @@ echo 'GEM_PATH=$HOME/.gem' >> ~/.bash_profile
 ```
 source ~/.bash_profile
 ```
+* There's one last thing to consider here! If you have a newer macOS your terminal might not be running `~/.bash_profile` at startup. Instead, it will run `~/.zprofile` when you start a terminal window. This is not a huge problem, we just need to take everything that's currently in `~/.bash_profile` and put it in `~/.zprofile` using the following command:
+```
+cat ~/.bash_profile >> ~/.zprofile
+```
 * Check your installation (you should see a bunch of "OK"s)
 ```
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
