@@ -42,22 +42,22 @@ rbenv init
 eval "$(rbenv init - zsh)"
 ```
 
-* The above message is telling you that in order make sure that `rbenv` loads automatically you need to run the above command. This will setup your terminal to start rbenv on open. It actually puts that command in `bash_profile` which will automatically run every time you open a terminal window.
+* The above message is telling you that in order make sure that `rbenv` loads automatically you need to make the command `eval "$(rbenv init - zsh)"` run at startime by adding that line of code to the file `~/.zshrc`. This will setup your terminal to start rbenv on open. In fact, all commands in `~/.zshrc` will run whenever you open a terminal window
 ```
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 ```
 * More recent macOS versions have very tight security around system folders. to get around this we'll need to move the installation path of all the gems to your user folder (read ![this article](https://medium.com/@morgannegagne/what-is-a-ruby-gem-1eec2684e68) for more info on what gems are). Do that with the following commans:
 ```
-echo 'GEM_HOME=$HOME/.gem' >> ~/.bash_profile
-echo 'GEM_PATH=$HOME/.gem' >> ~/.bash_profile
+echo 'GEM_HOME=$HOME/.gem' >> ~/.zshrc
+echo 'GEM_PATH=$HOME/.gem' >> ~/.zshrc
 ```
-* The above commans tell your terminal to start rbenv and change the Gem Paths to the user-definted paths at start. This is because the `bash_profile` is just a smalls script that runs whenever you open a terminal window. Once you've run these commans you can close and reopen your terminal window to make sure that all those setup commands are run. You can also run the following `source` command to run the `bash_profile` script to run all those commands
+* The above commans tell your terminal to start rbenv and change the Gem Paths to the user-definted paths at start. This is because the `~/.zshrc` is just a smalls script that runs whenever you open a terminal window. Once you've run these commans you can close and reopen your terminal window to make sure that all those setup commands are run. You can also run the following `source` command to run the `~/.zshrc` script to run all those commands
 ```
-source ~/.bash_profile
+source ~/.zshrc
 ```
-* There's one last thing to consider here! If you have a newer macOS your terminal might not be running `~/.bash_profile` at startup. Instead, it will run `~/.zprofile` when you start a terminal window. This is not a huge problem, we just need to take everything that's currently in `~/.bash_profile` and put it in `~/.zprofile` using the following command:
+* There's one last thing to consider here! If you have an older macOS your terminal might not be running `~/.zshrc` at startup. Instead, it will run `~/.bash_profile` when you start a terminal window. This is not a huge problem, we just need to take everything that we just put in `~/.zshrc` and put it in `~/.bash_profile` using the following command:
 ```
-cat ~/.bash_profile >> ~/.zprofile
+cat ~/.zshrc >> ~/.bash_profile
 ```
 * Check your installation (you should see a bunch of "OK"s)
 ```
