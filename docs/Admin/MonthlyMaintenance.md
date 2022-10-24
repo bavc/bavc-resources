@@ -38,11 +38,14 @@ Monitors should be calibrated using color bars once a month. Each station should
 
 There's a number of reports in Salesforce that are used to track projects, sales, and objects. These needs to be kept up to to date in order to work properly. Monthly maintenance is a great time to clean up and check in on these reports.
 
+* ![https://bavc.lightning.force.com/lightning/r/Report/00O2J000006aXH1UAM/view](This report) shows all opportunities that have preservation objects, but whose *Stage* field is not marked as *In Progress* or *Completed*. The point is to show any opportunities that may have an out of date status in *Stage*. This report should ideally be empty.
+* ![https://bavc.lightning.force.com/lightning/r/Report/00O2J000006aXGwUAM/view](This report) shows all opportunities that don't have preservation objects, and whose *Stage* field is not marked as *Closed Lost* or *Awaiting Funding*. The point is to show any opportunities that that never turned into actual projects. These projects can be followed up with if there's still a chance of them happening. If not, they should be marked as *Closed Lost* to clean up out of date opportunities.
+
 ### PresRAID Deletions
 
 * [QC Passed Not Loaded To Drive](https://bavc.lightning.force.com/lightning/o/Preservation_Object__c/list?filterName=00B500000086MiREAU): This view makes it easy to mark items as *loaded* to a drive.
 
-* [PresRAID Delete Now](https://bavc.lightning.force.com/lightning/r/Report/00O50000006AAaQEAW/view?queryScope=userFolders): This report contains every project that is past its PredRAID deletion deadline. We like to email collection holders and warn them before we delete their backups. However, once you've deleted the backups make sure to check off the box labeled *Deleted from PresRAID?* in the Opportunity record. 
+* [PresRAID Delete Now](https://bavc.lightning.force.com/lightning/r/Report/00O50000006AAaQEAW/view?queryScope=userFolders): This report contains every project that is past its PredRAID deletion deadline. We like to email collection holders and warn them before we delete their backups. However, once you've deleted the backups make sure to check off the box labeled *Deleted from PresRAID?* in the Opportunity record.
 
 * [Preservation Quotes In Negotiation](https://bavc.lightning.force.com/lightning/r/Report/00O2J000006MsiZUAS/view?queryScope=userFolders): This report shows all inquiries that are currently in negotiation. If you haven't heard from someone in a while you can reach out to them again. If it's been too long and the project won't happen you can mark the opportunity as *Closed/Lost*
 
