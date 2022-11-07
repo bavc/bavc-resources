@@ -141,6 +141,15 @@ for file in *_mezzanine.mov ; do ffmpeg -i "$file" -c:v libx264 -pix_fmt yuv420p
 ```
 for file in *.m2t ; do ffmpeg -i "$file" -c:v libx264 -pix_fmt yuv420p -movflags faststart -crf 17 -b:a 160000 -ar 48000 -s 1920x1080 -ac 2 -vf yadif -filter_complex "[0:a:0]aresample=async=1:min_hard_comp=0.01" -y  "${file%.*}_access.mp4" ; done
 ```
+* Analog Master: 640 x 480 Access Files (De-Interlaced), Audio Channels Same as Original, 16:9 Aspect Ratio:
+```
+for file in *.mov ; do ffmpeg -i "$file" -c:v libx264 -pix_fmt yuv420p -movflags faststart -crf 18 -b:a 160000 -ar 48000 -aspect 16:9 -s 640x480 -vf crop=720:480:0:4,yadif,setdar=16/9 "${file%.*}_access.mp4" ; done
+```
+* Create 16:9 MP4 file from 4:3 MP4 file without transcoding
+```
+ffmpeg -i [Path To Input] -movflags faststart -aspect 16:9 -c copy  [Output File Path]
+```
+
 #### Mezzanine files
 
 * For Prores HQ, De-Interlaced, 24-bit PCM Audio [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
@@ -194,6 +203,14 @@ for file in *.mov ; do ffmbc -i "$file" -target dvcpro50 -pix_fmt yuv422p -r nts
 * 1920 x 1080 ProRes HQ Files from HDV .m2t files
 ```
 for file in *.m2t ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -vf yadif -filter_complex "[0:a:0]aresample=async=1:min_hard_comp=0.01" -c:a pcm_s24le -y  "${file%.*}_access.mp4" ; done
+```
+* For Prores HQ, De-Interlaced, 24-bit PCM Audio, 16:9 output
+```
+for file in *.mov ; do ffmpeg  -i "$file" -c:v prores -profile:v 3 -aspect 16:9 -vf yadif,setdar=16/9 -c:a pcm_s24le "${file%.*}_mezzanine.mov" ; done
+```
+* Create 16:9 MOV Prores file from 4:3 MOV ProRes file without transcoding
+```
+ffmpeg -i [Path To Input] -aspect 16:9 -c copy  [Output File Path]
 ```
 
 #### Upres SD Files to HD
