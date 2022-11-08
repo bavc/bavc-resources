@@ -3,6 +3,7 @@ layout: page
 title: Scripts
 parent: Technical Documentation
 ---
+{:toc}
 
 # Scripts
 
