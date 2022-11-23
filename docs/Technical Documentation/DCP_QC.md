@@ -68,13 +68,37 @@ Now you can install the tool by running the following command:
 
 This will create a directory called `build/lib/clairmeta` at the root level. Inside is a bunch of .py scripts, includng `cli.py`. This is a command line tool that has built specifically for the computer that you're using. You'll need to run this tool to check the DCPs, but you can make a symlink to run this easier.
 
-If you're on an older mac use the following command:
+Sometimes the persmission are screwy on this folder, so start by opening up the permissions on it:
+
+```
+sudo chmod -R 777 [/path/to/github/repo/build/lib/clairmeta]]
+```
+
+Now, before we make the symlink we want to see where your computer is putting binaries like homebrew and ffmpeg. Do so this, run the following command:
+
+```
+which brew
+```
+
+This asks the computer to tell you where homebrew lives. It'll probably put out one of the two following paths depending on your OS and how old the computer is:
+
+```
+/usr/local/bin/homebrew
+```
+
+or
+
+```
+/opt/homebrew
+```
+
+You want to put the symlink to clairmeta in the same directory as homebrew. If homebrew is in `/usr/local/bin/` then use the following command:
 
 ```
 ln -s <path to the newly created cli.py script> /usr/local/bin/clairmeta
 ```
 
-If you're on a newer mach (pres grotto or newer) use the following command:
+If homebrew is in `/opt/` then use the following command:
 
 ```
 ln -s <path to the newly created cli.py script> /opt/clairmeta
