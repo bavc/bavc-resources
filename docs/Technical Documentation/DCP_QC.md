@@ -12,6 +12,9 @@ Digital Cinema Packages (DCP) are files specifically made to be projected in a D
 
 QCing DCPs involves using some specialized software, along with some QC steps that are typical of most BAVC QC Workflows. This article will describe the general process of QCing DCPs, as well as how to install the software. Intalling the software is *not easy at all* so be very careful and read the instructions thoroughly
 
+
+For the purpose of testing the QC software you can use [this](https://www.charbon-studio.com/get/dcps/CHARBON-INTEROP-24.zip) sample DCP, which is found in this [repository of sample files](https://www.charbon-studio.com/resources).
+
 ## Installing QC software
 
 The main software tools you'll use to QC a DCP are `dcp-o-matic` and `clairmeta`. `dcp-o-matic` will playback DCPS, so it's an important tool for viewing the content. `clairmeta` can perform checks on fixity, structure, naming, etc, so it's very useful to make sure that the files and directory are properly formed.  It's easy enough to install `dcp-o-matic` using `homebrew` with the following command:
@@ -66,50 +69,16 @@ Now you can install the tool by running the following command:
 
 `python3 ./setup.py install`
 
-This will create a directory called `build/lib/clairmeta` at the root level. Inside is a bunch of .py scripts, includng `cli.py`. This is a command line tool that has built specifically for the computer that you're using. You'll need to run this tool to check the DCPs, but you can make a symlink to run this easier.
-
-Sometimes the persmission are screwy on this folder, so start by opening up the permissions on it:
+Once this is finished, you can test that the tool has been properly installed by running the following command:
 
 ```
-sudo chmod -R 777 [/path/to/github/repo/build/lib/clairmeta]]
+python3 -m clairmeta.cli
 ```
 
-Now, before we make the symlink we want to see where your computer is putting binaries like homebrew and ffmpeg. Do so this, run the following command:
+If it ran properly you should see the following output
 
 ```
-which brew
-```
-
-This asks the computer to tell you where homebrew lives. It'll probably put out one of the two following paths depending on your OS and how old the computer is:
-
-```
-/usr/local/bin/homebrew
-```
-
-or
-
-```
-/opt/homebrew
-```
-
-You want to put the symlink to clairmeta in the same directory as homebrew. If homebrew is in `/usr/local/bin/` then use the following command:
-
-```
-ln -s <path to the newly created cli.py script> /usr/local/bin/clairmeta
-```
-
-If homebrew is in `/opt/` then use the following command:
-
-```
-ln -s <path to the newly created cli.py script> /opt/clairmeta
-```
-
-If you've done this correctly you'll be able to run the `cli.py` script just by running `clairmeta` hooray!
-
-Give it a test, you should see the following output if you run `clairmeta`
-
-```
-usage: clairmeta [-h] {check,probe} ...
+usage: cli.py [-h] {check,probe} ...
 
 Clairmeta Command Line Interface 1.3.0
 
@@ -122,8 +91,7 @@ options:
   -h, --help     show this help message and exit
 ```
 
-If you can't get the symlink working, you can still run the command directly from that folder `ClairMeta/build/lib/clairmeta` you'll just need to type in the path every time.
-
+If this looks correct then congrats! You've got clairmeta up and running. 
 
 ## Running QC software
 
@@ -132,13 +100,13 @@ If you can't get the symlink working, you can still run the command directly fro
 Clairmeta lets you probe and check DCPs. This is the standard command for probing a DCP:
 
 ```
-clairmeta probe -type dcp [path/to/dcp]
+python3 -m clairmeta.cli probe -type dcp [path/to/dcp]
 ```
 
 This will just spit out a bunch of metadata in a json format. You can output this to a file using the following command
 
 ```
-clairmeta probe -type dcp [path/to/dcp] -format json > [output/path.json]
+python3 -m clairmeta.cli probe -type dcp [path/to/dcp] -format json > [output/path.json]
 ```
 
 In that case you need to define the output path and give it a .json extension. You can really make it anything, just be sure it ends in .json, though it's easiest if you just make it a sidecar file of the original DCP *(don't put it in the DCP!)*
@@ -146,5 +114,5 @@ In that case you need to define the output path and give it a .json extension. Y
 To check the DCP you'll use th following command:
 
 ```
-clairmeta probe -check dcp [path/to/dcp]
+python3 -m clairmeta.cli -check dcp [path/to/dcp]
 ```
