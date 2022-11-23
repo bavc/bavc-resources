@@ -24,7 +24,7 @@ Ok that's easy enough. Let's dive into the hard part
 
 ### Installing clairmeta
 
-There is no easy way to instal clairmeta, or some of the dependencies, so you have to do a few thing the hard way. ![You can find the GitHub page for it here.](https://github.com/Ymagis/ClairMeta) First, lets discuss the dependencies:
+There is no easy way to instal clairmeta, or some of the dependencies, so you have to do a few thing the hard way. [You can find the GitHub page for it here.](https://github.com/Ymagis/ClairMeta) First, lets discuss the dependencies:
 
 * asdcplib
 * mediainfo
@@ -32,7 +32,7 @@ There is no easy way to instal clairmeta, or some of the dependencies, so you ha
 
 `mediainfo` and `sox` can be easily installed using homebrew. Do that first, but there's a good chance the computer your own already has those programs installed.
 
-The hard part is installed `asdcplib`. In order to do that you'll need to download the github repo for `asdcplib` which can be ![found here](https://github.com/cinecert/asdcplib). Once you've done that, use `cd` to change the working directory of terminal to the root level of the download github repo (to be safe, you can move the github repo to whatever folder all your github repos live in first).
+The hard part is installed `asdcplib`. In order to do that you'll need to download the github repo for `asdcplib` which can be [found here](https://github.com/cinecert/asdcplib). Once you've done that, use `cd` to change the working directory of terminal to the root level of the download github repo (to be safe, you can move the github repo to whatever folder all your github repos live in first).
 
 Once you're in the `asdcplib` directory run the following commands
 
@@ -60,7 +60,7 @@ Then you didn't install the tool properly. Check the commands you ran and try ag
 
 Now, it's time to install `clairmeta` itself.
 
-go to the ![Github Repo](https://github.com/Ymagis/ClairMeta) and download it. Move the GitHub repo to whereever you like to keep your repos. Move your terminal window into the repo by using the `cd` command.
+go to the [Github Repo](https://github.com/Ymagis/ClairMeta) and download it. Move the GitHub repo to whereever you like to keep your repos. Move your terminal window into the repo by using the `cd` command.
 
 Now you can install the tool by running the following command:
 
