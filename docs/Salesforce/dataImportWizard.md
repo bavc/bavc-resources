@@ -90,11 +90,12 @@ _Note: Some collection holders deliver their metadata in a seperate speadsheet t
 Once you've created the CSV file that will be uploaded we'll use Data Import Wizard to upload the info into Salesforce.
 
 * Open and log into Salesforce
-* Click the Setup button at the top right
-* On the left-hand side of the screen under Administer click Data Management -> Data Import Wizard
+* Click the Gear button at the top right and then press _Setup_
+* On the left-hand side of the screen under _Integrations_ click _Data Import Wizard_
+  + You can also just type "Data Import Wizard" into the _Quick Find_ search bar.
 * Click Launch Wizard!
-* Under What kind of data are you importing? select Custom Object -> Preservation Object
-* Under What do you want to do? select Add New Records. Then under Match by: select Name
+* Under What kind of data are you importing? select _Custom Object -> Preservation Object_
+* Under What do you want to do? select _Add New Records_. Then under _Match_ by: select _Name_
 * Drag the CSV file you've created where is says Drag CSV file here to upload under Where is your data located?
 * Hit Next
 * The next window will say Edit Field Mapping: Preservation Objects in this section you can make sure that all of the fields are mapped properly. If you notice anything is incorrect you can click Change and then type in the Salesforce field you want the selected CSV column mapped to.
