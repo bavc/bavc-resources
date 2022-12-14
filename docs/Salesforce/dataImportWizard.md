@@ -34,7 +34,7 @@ _Note: Some collection holders deliver their metadata in a seperate speadsheet t
 * You'll need to fill in the following info for each tape
   - Opportunity
       + This is a unique text string for each opportunity. You can find the opportunity ID in the URL for the opportunity:
-      + https://bavc.lightning.force.com/lightning/r/Opportunity/0062J00000tZXeEQAW/view
+      + https://bavc.lightning.force.com/lightning/r/Opportunity/*0062J00000tZXeEQAW*/view
       + In the above sample URL for an opportunity, the ID is the bolded string of characters between Opportunity/ and /View
       + The barcode may vary slightly, but the ID will always be a string of characters that looks similar to that and is near the end of the URL
   - Box *(Required)*
