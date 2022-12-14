@@ -27,7 +27,7 @@ First we need to format the data from the collection holder in the format expect
 
 _Note: Some collection holders deliver their metadata in a seperate speadsheet tab per box. For our use it’s best to move all of this information into a single tab._
 
-* Download ![PreservationOpportunity_DataWizard_Template.csv]({{site.baseurl}}/assets/files/PreservationOpportunity_DataWizard_Template.csv), which is attached to this page and open it with OpenOffice with the following options
+* Download [PreservationOpportunity_DataWizard_Template.csv]({{site.baseurl}}/assets/files/PreservationOpportunity_DataWizard_Template.csv), which is attached to this page and open it with OpenOffice with the following options
   - Character Set Unicode UTF-8
   - Separator Options: Uncheck all except Separated by Comma
   - Double-check that it's correct. Click OK.
