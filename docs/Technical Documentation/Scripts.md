@@ -91,7 +91,7 @@ The default specs for our access files are based on CAVPP's target specification
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v ffv1 -level 3 -g 1 -slices 16 -slicecrc 1 -color_primaries smpte170m -color_trc bt709 -colorspace smpte170m -color_range mpeg -metadata:s:v:0 "encoder= FFV1 version 3" -c:a copy -vf setfield=bff,setsar=40/27,setdar=4/3 -metadata creation_time=now -f matroska "${file%.*}.mkv" ; done
 ```
-* Creating a 10-but Uncompressed File from an FFV1/MKV files:
+* Creating a 10-bit Uncompressed File from an FFV1/MKV files:
 ```
 for file in *.mkv ; do ffmpeg -i "$file" -movflags write_colr -c:v v210 -color_primaries smpte170m -color_trc bt709 -colorspace smpte170m -color_range mpeg -metadata:s:v:0 "encoder=Uncompressed 10-bit 4:2:2" -c:a copy -vf setfield=bff,setsar=40/27,setdar=4/3 -f mov "${file%.*}.mov" ; done
 ```
