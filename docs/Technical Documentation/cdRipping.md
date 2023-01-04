@@ -172,7 +172,7 @@ Because CDs often come in large numbers, it’s easier to update the QC records 
       * “Pass”
       * This is the most important field, since it determines the QC status of the record.
 
-### Ripping CDs Outside of BAVC
+### Ripping CD-DAs Outside of BAVC
 
 If you plan to rip CDs at an institution outside of BAVC you can follow most of the main steps. You'll still want to use XLD, but you won't be using Salesforce at all to handle the metadata. Instead of using `cdEngine.py`, which by design needs to be connected to salesforce, you can use [`simple_cd.py`](https://github.com/bavc/videomachine/blob/master/simple_cd.py), which works the same way, but allows the user to manually enter any embedded metadata.
 
@@ -182,3 +182,74 @@ If you plan to rip CDs at an institution outside of BAVC you can follow most of 
    - `simple_cd.py -i /Path/To/Folder -s`
 * Run the script with the following command to create an MP3 for every track on the original CD file, along with a single MP3 containing all of the CD content:
    - `simple_cd.py -i /Path/To/Folder -s -m`
+
+## Ripping CD-ROM discs
+
+CD-ROMs are different than CD-DAs, and have to be treated differently. Since CD-ROMs can contain any arbitrary file-based data, rather than the strict audio configuration that CD-DA's always have, we need to approach the migration by creating an ISO image of the CD-ROM. If you're familiar with ripping DVDs you'll see that this is very similar to how DVDs are handled. You can see how to handle DVDs int the article titled [DVD Ripping](https://bavc.github.io/bavc-resources/docs/Technical%20Documentation/DVDRipping.html).
+
+## Required Software
+
+* ddrescue
+   * If you have Homebrew installed you can install by running the command `brew install ddrescue`
+
+## Load the CD Into the Drive
+Either load the CD into the slot on the side of the computer, or open the tray with the Eject (⏏) button on the keyboard, load the disc in the tray, then press Eject again to cose the tray
+
+## Unmount the CD using drutil
+In order for ddrescue to rip the CD, you'll need to unmount the disk from the computer. Unmounting is different from ejecting. Ejecting implies physically removing the disk from the computer. Unmounting simply means virtually removing the disk as a readable filesystem from the computer's directory
+
+First, you need to find out the Device Path of the disc you just loaded into the computer. To do this, you need to run the diskutil list command. If you're on a SAN client, or a computer with a bunch of drives connected, this will give you big long list of connected disks. You'll need to find the one that corresponds with the DVD you're loaded. Here's a sample:
+
+```
+Prez5-mp:~ preservation$ diskutil list
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *3.0 TB     disk0
+   1:                        EFI EFI                     209.7 MB   disk0s1
+   2:                  Apple_HFS Media2_3TB              3.0 TB     disk0s2
+/dev/disk1 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *500.1 GB   disk1
+   1:                        EFI EFI                     209.7 MB   disk1s1
+   2:                  Apple_HFS Mac HD                  499.2 GB   disk1s2
+   3:                 Apple_Boot Recovery HD             650.0 MB   disk1s3
+/dev/disk2 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *3.0 TB     disk2
+   1:                        EFI EFI                     209.7 MB   disk2s1
+   2:                  Apple_HFS 10.11.6_BU              3.0 TB     disk2s2
+   3:                 Apple_Boot Recovery HD             650.0 MB   disk2s3
+/dev/disk3 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:                            PLAYBACK CD            *700.0 MB     disk3
+```
+
+The DVD disk in this example is mapped to /dev/disk3. We can tell because it's 700.0MB, and the title is "Playback CD". That just happens to be the title of this CD. The title and device number WILL change on different computers and for different CDs. You'll have to figure out what they are for each disk, just to be sure!
+
+Now that you know the device path for the DVD, you can unmount it with the following command:
+
+The general command is: `diskutil unmount /device/path`
+
+You'll need to fill in the `/device/path` part yourself, so for this example it would be:
+
+`diskutil unmount /dev/disk3`
+
+The computer will respond with` Volume PLAYBACK on disk3 unmounted`
+
+You're done with this step!
+
+##Rip the CD using ddrescue
+Run the following command
+
+`ddrescue -b 2048 -v /device/path /Path/to/output/folder/DiskName.iso /Path/to/output/folder/DiskName.iso.log`
+
+The device path and paths to the outputs (DiskName.iso and DiskName.iso.log) will need to be filled out by you. This will create two files: An ISO, which is a clone of the disc but as a file, and a log of the process.
+
+Continuing with the example from the previous step, this is the string we would use to rip the CD to the Testing folder on the SAN
+
+`ddrescue -b 2048 -v /dev/disk3 /Volumes/SymplyUltra/Testing/Playback_cd.iso /Volumes/SymplyUltra/Testing/Playback_cd.iso.log`
+
+This command will take a while to run, depending on how long the CD is and how damaged it is. ddrescue can recover damaged CDs, but it takes a long time to run. The command will quit automatically once it is finished, and will let you know if any errors occurred.
+
+##Post-Rip Processing
+Once the CD has been ripped you'll be left with an ISO file. This file contains the exact same data as the CD, with the same structure and organization as the original CD. This file should be considered the "Preservation File". It may be difficult to create "Access" files from this, depending on what the contents of the CD are. There may be hundres of folders, sub-folders, and files. Or they may just be a single video or audio file. Discuss with the client how they would like the concept of "Access" handled in this case. However, stress to the client that the ISO is the preservation file. If the ISO file is properly preserved, the CD is no longer needed. 
