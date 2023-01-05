@@ -74,7 +74,7 @@ Continuing with the example from the previous step, this is the string we would 
 This command will take a while to run, depending on how long the DVD is and how damaged it is. ddrescue can recover damaged DVDs, but it takes a long time to run. The command will quit automatically once it is finished, and will let you know if any errors occurred.
 
 #Run dvd_transcoder.py script on ISO
-This script will automatically perform the following steps
+The script named [`dvd_transcoder.py`](https://github.com/bavc/videomachine/blob/master/dvd_transcoder.py) will automatically perform the following steps
 
    * Mount the ISO
    * Streamcopy the VOBS to a local directory
@@ -83,7 +83,7 @@ This script will automatically perform the following steps
    * Unmount the ISO
    * Delete temporary files
 
-The script is located here, but you can drag it to your desktop for quick access: `/Volumes/Creative Services/Creative Services/PRESERVATION/Scripts/dvd_transcoder.py`
+The script is located on our [`GitHub Repo`](https://github.com/bavc/videomachine), but you can drag it to your desktop for quick access: `/Volumes/SymplyUltra/Scripts/dvd_transcoder.py`
 
 You can see the instructions for running the script if you run it with the -h flag, like so: 
 
