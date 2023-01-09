@@ -16,7 +16,7 @@ In order to follow any of these steps you'll need to be logged in as an admin an
 
 #Assignment Setup
 
-First, you'll need to [create assignemnts](https://bavc.github.io/bavc-resources/docs/Education/createCourse.html#Creating-Assignments). Once you have an assignment created you'll need to make sure that it is set up to allow "Manual Feedback" and that only 100% grades count as a pass. Here are the steps to do this:
+First, you'll need to [create assignments](https://bavc.github.io/bavc-resources/docs/Education/createCourse.html#Creating-Assignments). Once you have an assignment created you'll need to make sure that it is set up to allow "Manual Feedback" and that only 100% grades count as a pass. Here are the steps to do this:
 
 * Click on _Courses_ icon on the left-hand side
 * Select the course you want to edit from the list. Probably the one named _Hands-On Training with Analog Video Playback Equipment_
