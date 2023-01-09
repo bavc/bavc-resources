@@ -12,7 +12,7 @@ Once you have the course you want to edit selected, press the _Contents_ tab at 
 
 Our current preservation class has a section for each Module. You can organize the class any way you like, but this is how we choose to do it.
 
-## Creating Assignments
+##Creating Assignments
 
 Once you have the sections you want created, you can press the _Add Activity_ at the bottom of the section you want to add the assignment to. This will open a new window with a number of options for different activities. For an assigemnt, you want to press the _Exam_ section on the left side of the window, then press _Blank Assignemnt_. This will create a blank assignment that you can add questions to from scratch.
 
@@ -20,7 +20,7 @@ After pressing this button a new line will be added to the section. You'll need 
 
 From here you can add sections and questions to the exam.
 
-## Assignment Settings
+##Assignment Settings
 
 Once you have an assignment created you'll need to make sure that it is set up to allow "Manual Feedback" and that only 100% grades count as a pass. Here are the steps to do this:
 
@@ -34,8 +34,8 @@ Once you have an assignment created you'll need to make sure that it is set up t
 * Set _Passing Grade_ to _100%_
 * Select _Save & Close_
 
-## Creating Learning Materials
+##Creating Learning Materials
 
 Learning materials like instructional videos and materials
 
-### Instructional Videos
+###Instructional Videos
