@@ -8,6 +8,8 @@ parent: Technical Documentation
 
 Azimith adjustments must be made for every audiocassette and open reel audio tape we transfer. Adjusting the azimuth ensures maximum head alignment, and gets the best sounding transfers.
 
+For more information about why we adjust azimuth and more details about how to do it check out this [excellent article on the topic](https://richardhess.com/notes/2006/09/27/azimuth-hows-and-whys/)
+
 ##General Adjust Azimuth
 
 The best way to perform azimuth adjustments is by monitoring the audio in mono, and then turning the adjustment screw until you hear the best high frequency response.
