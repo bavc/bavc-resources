@@ -8,9 +8,9 @@ parent: Salesforce
 # Salesforce Scripting Configuration
 
 There are a few python scripts that interact directly with Salesforce. Here is a non-exhaustive list:
-* cdEngine.py
-* sfsync.py
-* transcodeEngine.py
+* `cdEngine.py`
+* `sfsync.py`
+* `transcodeEngine.py`
 
 These connect to salesforce via an API key. The API key must be kept private, so it's kept separately in a configuration file named `config.py`. This config file needs to be in the same directory as the script that's being run. On the SAN the config file lives in the `Scripts` folder along with the rest of the scripts.
 
