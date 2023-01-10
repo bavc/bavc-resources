@@ -4,13 +4,13 @@ title: Adjusting Azimuth
 parent: Technical Documentation
 ---
 
-#Adjusting Azimuth for Audio Tape Recordings
+# Adjusting Azimuth for Audio Tape Recordings
 
 Azimith adjustments must be made for every audiocassette and open reel audio tape we transfer. Adjusting the azimuth ensures maximum head alignment, and gets the best sounding transfers.
 
 For more information about why we adjust azimuth and more details about how to do it check out this [excellent article on the topic](https://richardhess.com/notes/2006/09/27/azimuth-hows-and-whys/)
 
-##General Adjust Azimuth
+## General Adjust Azimuth
 
 The best way to perform azimuth adjustments is by monitoring the audio in mono, and then turning the adjustment screw until you hear the best high frequency response.
 
@@ -20,13 +20,13 @@ When using reaper, put the main output in Mono mode by pressing the button on th
 
 Below we'll describe which screws to turn for each of our decks.
 
-##Tascam 122Mkiii Adjustments
+## Tascam 122Mkiii Adjustments
 
 For all our Tascam decks we replace the typical philips azimuth screw with a torx style screw. These types of screws are less likely to strip and easier to use. We purchase the screws from Fasterner-Express. This is the part number: M2 x .4 x 8mm Pan Head Star (Torx Style) Socket Screws A2 Stainless MPTS208-9N4.
 
 The screw is only accessible when the deck is in play mode. The azimuth screw is the bottom screw on the right side of the playhead.
 
-##Otari MX-55 Adjustments
+## Otari MX-55 Adjustments
 
 On the MX-55 the playhead is the rightmost head. There are thre heads total. From left to right they are:
 * Erase Head
@@ -35,7 +35,7 @@ On the MX-55 the playhead is the rightmost head. There are thre heads total. Fro
 
 The Azimuth screw is the Hex screw immediately to the right of the play head (3rd head from left).
 
-##Otari MX-5050 Adjustments
+## Otari MX-5050 Adjustments
 
 The MX-5050 has two playback heads. One is for quarter-track and one is for half-track. There are four heads total. From left to right they are:
 
