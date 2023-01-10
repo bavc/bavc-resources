@@ -4,7 +4,7 @@ title: Creating Assignments
 parent: Education
 ---
 
-#Creating Assignments and Learning Materials
+# Creating Assignments and Learning Materials
 
 To create an assignment you'll need to first [create a Course](https://bavc.github.io/bavc-resources/docs/Education/createcourse.html). Once you have the course created, you can edit the course by selected the _Course_ icon on the left side of the screen, then selecting the course you want to edit from the list that appears.
 
@@ -12,7 +12,7 @@ Once you have the course you want to edit selected, press the _Contents_ tab at 
 
 Our current preservation class has a section for each Module. You can organize the class any way you like, but this is how we choose to do it.
 
-##Creating Assignments
+## Creating Assignments
 
 Once you have the sections you want created, you can press the _Add Activity_ at the bottom of the section you want to add the assignment to. This will open a new window with a number of options for different activities. For an assigemnt, you want to press the _Exam_ section on the left side of the window, then press _Blank Assignemnt_. This will create a blank assignment that you can add questions to from scratch.
 
@@ -20,7 +20,7 @@ After pressing this button a new line will be added to the section. You'll need 
 
 From here you can add sections and questions to the exam.
 
-##Assignment Settings
+## Assignment Settings
 
 Once you have an assignment created you'll need to make sure that it is set up to allow "Manual Feedback" and that only 100% grades count as a pass. Here are the steps to do this:
 
@@ -34,11 +34,11 @@ Once you have an assignment created you'll need to make sure that it is set up t
 * Set _Passing Grade_ to _100%_
 * Select _Save & Close_
 
-##Creating Learning Materials
+## Creating Learning Materials
 
 Learning materials like instructional videos and materials can be added to sections in a similar way.
 
-###Instructional Videos
+### Instructional Videos
 
 To add an instructional video, you'll first need to add the video to the course's video library. To do this, click the _Video Library_ tab at the top of the course editor window. Then press the _Add video_ button. From there you simply select the file you want to upload and add it. Once you do that you'll see the video begin to upload to the page. When the upload is complete, you can press the edit button (black square with a pen in it) that appears over the video when you hover over the thumbnail. This will open an editing pane you can use to rename the video.
 
@@ -54,6 +54,6 @@ Once you have an SRT file to go along with the video, click the _Subtitles_ menu
 
 Once you've finished adjusting the settings, press _Save_ and _<_ to return to the Course Content window. If you're happy with everything, you can press _Save_ again to save the changes you've made to the course.
 
-###Reading Materials
+### Reading Materials
 
-Reading materials are added much the same. Go to the section you want to add them to and click _Add activity_. You can then add eBooks, PDFs, or YouTube links. For our class we've consolidated all of the reading materials into one single PDF. This is because any materials added to the course count towards the participant's completion. Since these reading materials are optional, we don't want unopened/unread materials counting against the participant's completion of the class. To get around this, we added all the materials as a single PDF, so if they click on it once it looks like all of the materials were viewed. 
+Reading materials are added much the same. Go to the section you want to add them to and click _Add activity_. You can then add eBooks, PDFs, or YouTube links. For our class we've consolidated all of the reading materials into one single PDF. This is because any materials added to the course count towards the participant's completion. Since these reading materials are optional, we don't want unopened/unread materials counting against the participant's completion of the class. To get around this, we added all the materials as a single PDF, so if they click on it once it looks like all of the materials were viewed.

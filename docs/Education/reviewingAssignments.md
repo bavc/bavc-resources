@@ -5,7 +5,7 @@ parent: Education
 ---
 
 
-#Reviewing Assignments
+# Reviewing Assignments
 
 Reviewing Assignments is remarkably easy using Learnworlds. This article will describe the ideal workflow for reviewing students' assignments and providing feedback for an asynchronous class.
 
@@ -14,7 +14,7 @@ In order to follow any of these steps you'll need to be logged in as an admin an
 * [learn.bavc.org]("learn.bavc.org")
 * [bavc.mylearnworlds.com]("bavc.mylearnworlds.com")
 
-#Assignment Setup
+# Assignment Setup
 
 First, you'll need to [create assignments](https://bavc.github.io/bavc-resources/docs/Education/createCourse.html#Creating-Assignments). Once you have an assignment created you'll need to make sure that it is set up to allow "Manual Feedback" and that only 100% grades count as a pass. Here are the steps to do this:
 
@@ -30,7 +30,7 @@ First, you'll need to [create assignments](https://bavc.github.io/bavc-resources
 
 You'll need to do this for every assignmnt that you want to provide manual feedback for. However, if you do this while you create the assignment you don't need to worry about it again (you only need to do it once!)
 
-#Student Feedback Notifications Setup
+# Student Feedback Notifications Setup
 
 Students wil receive feedback as a message in their Learnworlds inbox. They should also receive an email notification about it as long as their notification settings are properly setup. To make sure these are correct, do this:
 
@@ -41,7 +41,7 @@ Students wil receive feedback as a message in their Learnworlds inbox. They shou
 * Click _Save_
 
 
-#Review Workflow
+# Review Workflow
 
 ## Finding Assignments To Grade
 
