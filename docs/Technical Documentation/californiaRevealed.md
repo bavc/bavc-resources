@@ -37,6 +37,8 @@ The SOW contains a file list of deliverable specs, but here we're just going to 
 
 This section will describe the workflow steps you'll need to adjust or add to properly handle CA-R files
 
+### Intake
+
 * Intake
    - Intake must be performed using the [Data Import Wizard]({{ site.baseurl}}/docs/Salesforce/dataImportWizard.html). This is because CA-R has metadata that they want embedded into their files. You need to make sure metadata from their spreadsheet gets imported into the following SalesForce fields so that it gets embedded in the files.
       * Embedded Metadata: Title
