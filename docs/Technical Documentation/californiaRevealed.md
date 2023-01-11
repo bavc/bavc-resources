@@ -64,3 +64,9 @@ This section will describe the workflow steps you'll need to adjust or add to pr
       * BAVC1234567_cusb_000001_prsv.mkv
       * BAVC1234567_cusb_000001_prsv.mkv.md5
       * BAVC1234567_cusb_000001_prsv.mov
+   - Open up the checksum files with text editor and make sure they have the following format in the file
+      * [checksum] *[filename without BAVC barcode]
+      * Example: 986233f5d99de3b575b3907da3c7870a *cusb_000001_prsv.mkv
+   - Don't mark the the file QC ready until it has photos too. It's best to take photos early on, either before or while transferring a batch so photos don't hold up QC.
+   - If everything looks correct you can mark the tape QC ready and move it to the QC folder!
+   - If the access filenames look incorrect, or the checksum format is incorrect (the BAVC barcode is in the checksum, or something similar) you probably misnamed the .mov file. Make sure _prsv.mov is in the filename of the script won't process the files properly. 
