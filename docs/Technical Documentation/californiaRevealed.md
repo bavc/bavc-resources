@@ -112,4 +112,4 @@ This section will describe the workflow steps you'll need to adjust or add to pr
    - Make sure ALL files make it to the PresRAID before renaming or deleting files off the SAN
    - BAVC Barcodes need to be removed from the file before delivery
       * You can do this by hand for a small batch
-      * For a large batch, check the renaming script in Scripts page. Be careful and make sure you 
+      * For a large batch, check the renaming script in the [Scripts]({{ site.baseurl}}/docs/Technial%20Documentation/scripts.html#Removing%20Barcodes) page. Be careful and make sure you
