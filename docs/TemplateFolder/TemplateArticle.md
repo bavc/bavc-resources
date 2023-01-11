@@ -137,6 +137,8 @@ Right aligned columns
 
 [Link To a Page On This Site]({{ site.baseurl}}/docs/TemplateFolder/TemplateArticle.html) _This link just links back to this page, but notice the use of {{site.baseurl}}_
 
+If you want to link to a specific part of an article, hover your mouse over the Header of that section. A link icon should appear. You can the right-click and copy/paste this URL to link directly to the header of an article.
+
 Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 
