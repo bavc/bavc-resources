@@ -18,6 +18,10 @@ It is _**very important**_ that you only make quarter turns in either direction.
 
 When using reaper, put the main output in Mono mode by pressing the button on the Master fader that looks like two circles and says "Mono" under it. This does not change the recording to mono, but it forces the main output to be mono. Once the main output is mono, you can turn the azimuth screw listen to the high frequencies. If you're listening to music, the cymbals of the drums will become far more clear. If you're listening to talking it might be harder to hear, but the sound in general should become less muddy. This is generally easier to do with headphones, rather than speakers.
 
+Seeking out specific content like applause or similar sounds can be very helpful, since there's lots of high frequencies in that kind of content.  
+
+Make sure that any Dolby Noise Reduction is OFF when performing azimuth adjustments, even if the tape does have Dolby NR recorded on it.
+
 Below we'll describe which screws to turn for each of our decks.
 
 ## Tascam 122Mkiii Adjustments
@@ -25,6 +29,8 @@ Below we'll describe which screws to turn for each of our decks.
 For all our Tascam decks we replace the typical philips azimuth screw with a torx style screw. These types of screws are less likely to strip and easier to use. We purchase the screws from Fasterner-Express. This is the part number: M2 x .4 x 8mm Pan Head Star (Torx Style) Socket Screws A2 Stainless MPTS208-9N4.
 
 The screw is only accessible when the deck is in play mode. The azimuth screw is the bottom screw on the right side of the playhead.
+
+A word of warning: Make sure to remove the screw driver beforing pressing Stop. The 122 will retract the head stack when you hit stop, and if the screwdriver is in there it could potential damage te deck.
 
 ## Otari MX-55 Adjustments
 
