@@ -560,7 +560,7 @@ Keep in mind you can replace any string with any other string. It's very useful!
 
 ### Removing Barcodes
 
-Rename can very easily remove barcodes from files names. However, it's **very dangerous** because you can easily mangle files names with this command.
+`rename` can very easily remove barcodes from files names. However, it's **very dangerous** because you can easily mangle files names with this command.
 
   * First, you need to make sure you remove all hidden files from the working directory.
   * `cd` into whatever directory you want to rename the files in
