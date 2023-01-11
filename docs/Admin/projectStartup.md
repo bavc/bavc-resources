@@ -1,37 +1,15 @@
 ---
 layout: page
-title: Stripe Payments
+title: Project Startup
 parent: Admin
 ---
 
-# Using Stripe To Process Client Payments
+# Project Startup Procedures
 
-We use the website [Stripe](dashboard.stripe.com/) to process client payments for smaller projects. Larger projects should be processed with checks or wire transfer becuase Stripe charges us a fee.
+Most projects that we work on at BAVC have unified specs. This is because we work with many small organizations and individuals, and our standard deliverable set has been configured to serve these types of collection holders. However, from time to time we do work with large collection holders that have their own specific deliverables, with specs different than what we typically deliver.
 
-## Creating a Quote or invoice
+It's very important that any deviation from our standard deliverables be carefully documented in Salesforce, so that the transfer technicians and QC technician know how to create files and what to look for during QC.
 
-This is covered in the article titled [Creating Quotes and Invoices]({{ site.baseurl}}/docs/Salesforce/quotesInvoices.html) in the Salesforce section of our documentation
+## Step 1: Read the SOW
 
-## Logging into stripe
-
-Stripe login information can be found in our password manager. Ask finance or ops for help if you can't log in
-
-## Creating an invoice in Stripe
-
-Log into stripe and follow these directions
-
-* Press the _Create_ button in the top right corner of the strip screen
-* Press _Invoice_ from the dropdown menu
-* Add in the clients name in the _Find or add customer_ window. If the client already exists you can select them from the dropdown
-* Add the client's email
-* In the _Items_ section, add in something descriptive, such as _Prservation Services_ and the _Salesforce Quote Number_. Including the quote number is very helpful for the finance department
-* Once the numbers all match up, press Review Invoice
-* In the pop up window, add _preservation@bavc.org_ to the CC so that we get a record of the Invoice
-* Select _Send Invoice_
-
-That's it, you're done!
-
-
-## Tracking Payments
-
-If you want to see if someone has paid you can search for either the salesforce quote number, the Stripe invoice number, or the client's name in the Stripe search field. 
+SOW stands for _Statement of Work_. Most
