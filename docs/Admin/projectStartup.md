@@ -34,4 +34,4 @@ That's it, you're done!
 
 ## Tracking Payments
 
-If you want to see if someone has paid you can search for either the salesforce quote number, the Stripe invoice number, or the client's name in the Stripe search field.
+If you want to see if someone has paid you can search for either the salesforce quote number, the Stripe invoice number, or the client's name in the Stripe search field. 
