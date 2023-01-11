@@ -135,6 +135,8 @@ Right aligned columns
 
 [link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
+[Link To a Page On This Site]({{ site.baseurl}}/docs/TemplateFolder/TemplateArticle.html) _This link just links back to this page, but notice the use of {{site.baseurl}}_
+
 Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 
