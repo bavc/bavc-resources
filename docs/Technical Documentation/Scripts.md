@@ -76,8 +76,8 @@ FFmpeg is the command line tool for digital media manipulations that drives vRec
 ### Install/update
 Once Homebrew is installed, you can install or update ffmpeg by running:
 ```
-brew install ffmpeg --HEAD
-brew reinstall ffmpeg --HEAD
+brew install ffmpeg
+brew reinstall ffmpeg
 ```
 Reto Kromer's FFmpeg Cookbook for Archivists (great resource for installation and manipulations) [https://avpres.net/FFmpeg/#ch1](https://avpres.net/FFmpeg/#ch1)
 
