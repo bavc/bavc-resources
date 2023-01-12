@@ -91,26 +91,32 @@ This section will describe the workflow steps you'll need to adjust or add to pr
    * BAVC1234567_cusb_000001_access.HD.mp4.md5
    * BAVC1234567_cusb_000001_prsv.mkv
    * BAVC1234567_cusb_000001_prsv.mkv.md5
-   * BAVC1234567_cusb_000001_prsv.mov
+   * BAVC1234567_cusb_000001_prsv.mov (not delivered)
 - Open up the checksum files with text editor and make sure they have the following format in the file
    * [checksum] *[filename without BAVC barcode]
    * Example: 986233f5d99de3b575b3907da3c7870a *cusb_000001_prsv.mkv
 - Don't mark the the file QC ready until it has photos too. It's best to take photos early on, either before or while transferring a batch so photos don't hold up QC.
+- The .mov file is important for capture and transcoding, but we do not deliver it. You can move it to a folder named _DELETE AFTER QC_.
 - If everything looks correct you can mark the tape QC ready and move it to the QC folder!
 - If the access filenames look incorrect, or the checksum format is incorrect (the BAVC barcode is in the checksum, or something similar) you probably misnamed the .mov file. Make sure _prsv.mov is in the filename of the script won't process the files properly.
 
 ### Quality Control
 - Most quality control aspects will be the same, but here's a few things that are important to check:
-   * Preservation file is FFV1/MKV
-   * Access copy has embedded title (which will show up Quicktime)
-   * Access copy has embedded metadata, visible in Mediainfo (run Mediainfo on file)
+   * Preservation file is properly formatted FFV1/MKV
+      - The file should pass the _NYPL FFV1_ Mediaconch Policy
+   * Access copy has embedded title
+      - This which will show up at the top of the window when the file is opened Quicktime
+   * Access copy has embedded metadata, visible in Mediainfo
+      - Run `mediainfo` on the file to see this
    * Sidecar checksum files exist
    * Sidecar checksum has correct format
    * Photos exist and are of the correct object
+- Once QC is complete on a file, the originally captured .mov file can be deleted. We do not deliver the .mov file, it's just for capture.
 
 ### Loading
 - Files should be loaded to the drive as normal, this means Preservation and Access files are in their own folders. Checksum files should remain next to their associated files.
 - Make sure ALL files make it to the PresRAID before renaming or deleting files off the SAN
+- If the MKV files pass QC you can remove the MOV files from the PresRAID. They will take up lots of space.
 - BAVC Barcodes need to be removed from the file before delivery
    * You can do this by hand for a small batch
    * For a large batch, check the renaming script in the [Scripts]({{ site.baseurl}}/docs/Technical%20Documentation/Scripts.html#removing-barcodes) page. Be careful and make sure you
