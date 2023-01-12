@@ -334,17 +334,63 @@ mediainfo --Inform="General;\n%FileName%\n%Duration/String4%\n%FileSize/String4%
 
 A checksum is a string of letters and numbers that acts like a fingerprint for a file. If two files have the same sum, it is safe to assume the files are the same.
 
-To obtain a file's Md5 checksum:
-* Open Terminal app, type “md5 “ (without quotes, with space after)
-* Drop file(s) from finder window into terminal window, and press enter, and wait...
-* Copy md5 checksum codes from terminal window and paste into MD5 field in Salesforce
+Our transcode engine script creates checksums automatically, but it's good to know how to do it manually in case you run across weird files. 
+
+### MD5 Checksums
+
+There are many different types of checksums, we typically use MD5 checksums. MD5 checksums can be created using the `md5` command which comes pre-installed on all Mac computers.
+
+To obtain a file's Md5 checksum, run the following command:
+
+```
+md5 [/path/to/file]
+```
+
+For example, to run on a file named "Test.png" on the Desktop, this is what the command would look like:
+
+```
+md5 /Users/user/Desktop/test.png
+```
+
+This outputs the MD5, along with the file's path. Like this:
+
+```
+MD5 (/Users/user/Desktop/test.png) = 99f41da16147e318043a96da01a9a06f
+```
+
+If you want only the checksum, you can run the command with the `-q` flag:
+
+```
+md5 -q /Users/user/Desktop/test.png
+```
+
+You can then copy the md5 checksum codes from terminal window and paste into MD5 field in Salesforce
 
     More on MD5's here: [http://www.codejacked.com/using-md5sum-to-validate-the-integrity-of-downloaded-files/](http://www.codejacked.com/using-md5sum-to-validate-the-integrity-of-downloaded-files/)
 
-* Create an MD5 Checksum Sidecar file for each file in the working directory
+
+If you want to create an MD5 Checksum Sidecar file for each file in the working directory
+
 ```
 for file in *.* ; do md5 -q "$file">"${file}.md5" ; done
 ```
+
+### Other Checksum types
+
+Other common checksum types canbe created with commands already installed on a mac.
+
+To create a SHA-1 checksum use this command:
+
+```
+shasum /path/to/file
+```
+
+To create a SHA-256 checksum use this command:
+
+```
+shasum -a 256 /path/to/file
+```
+
 ***
 ## Rsync
 * rsync to presraid
