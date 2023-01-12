@@ -18,14 +18,27 @@ To see the full list of CA-R's deliverable specs you can go to their website and
 
 The SOW contains a file list of deliverable specs, but here we're just going to discuss the ones that are different than the usual BAVC stuff:
 
-* *Preservation Files*
+* *Video Preservation Files*
    - Format is FFV1.
    - Filenames formated as: [ObjectIdentifier]_prsv.[fileExtension]
-      * Example: cusb_000001_prsv.mov
+      * Example: cusb_000001_prsv.mkv
 
-* *Access Copies*
+* *Video Preservation Files*
+   - Format is BWAV (typical of BAVC).
+   - Filenames formated as: [ObjectIdentifier]_prsv.[fileExtension]
+      * Example: cusb_000001_prsv.wav
+
+* *Video Access Copies*
+   - MP4 (typical of BAVC)
    - 720x540
    - Filename always end in "_access.HD.mp4" (even through they're not HD)
+   - Checksums: Sidecar MD5 files with format: "checkum *filename"
+   - Descriptive metadata provided by CA-R should be instereted in the access file
+
+* *Audio Access Copies*
+   - AAC / M4A
+   - Variable Bit Rate (VBR)
+   - Filename always end in "_access.mp4" (no HD like the video)
    - Checksums: Sidecar MD5 files with format: "checkum *filename"
    - Descriptive metadata provided by CA-R should be instereted in the access file
 
@@ -65,13 +78,13 @@ This section will describe the workflow steps you'll need to adjust or add to pr
    * Use a formala to concatenate the BAVC Barcode number with the identifier supplied by CA-R
    * The filename should be this format: [BAVC_Barcode]_[ObjectIdentifier]_prsv.[fileExtension]
 
-### Ingest
+### Video Ingest
 - Capture files as 10-Bit MOV. You'll transcode files to FFV1 later
 - Name the file as the following format: [BAVC_Barcode]_[ObjectIdentifier]_prsv.[fileExtension]
    * Example: BAVC1234567_cusb_000001_prsv.mov
    * *DO NOT FORGET* about the "_prsv" section. This is how the transcode engine knows how to handle the files as CA-R files. Without this you'll need to do tons of manual work.
 
-### Transcode
+### Video Transcode
 - Run the transcode engine
 - Select 2 Delivrables
 - Derivatives 1 will be _FFv1/MKV_ (option 3)
@@ -85,7 +98,7 @@ This section will describe the workflow steps you'll need to adjust or add to pr
 - For the checksum select _Yes + Sidecar_ (option 2)
    * For the checksum format select _MD5 *filename_ (option 4)
 
-### Post-Transcode Check
+### Video Post-Transcode Check
 - Using the example _BAVC1234567_cusb_000001_prsv.mov_ the following files should now exist:
    * BAVC1234567_cusb_000001_access.HD.mp4
    * BAVC1234567_cusb_000001_access.HD.mp4.md5
@@ -100,10 +113,41 @@ This section will describe the workflow steps you'll need to adjust or add to pr
 - If everything looks correct you can mark the tape QC ready and move it to the QC folder!
 - If the access filenames look incorrect, or the checksum format is incorrect (the BAVC barcode is in the checksum, or something similar) you probably misnamed the .mov file. Make sure _prsv.mov is in the filename of the script won't process the files properly.
 
+### Audio Ingest
+- Capture files as 10-Bit MOV. You'll transcode files to FFV1 later
+- Name the file as the following format: [BAVC_Barcode]_[ObjectIdentifier]_prsv.[fileExtension]
+   * Example: BAVC1234567_cusb_000001_prsv.mov
+   * *DO NOT FORGET* about the "_prsv" section. This is how the transcode engine knows how to handle the files as CA-R files. Without this you'll need to do tons of manual work.
+
+### Audio Transcode
+- Run the transcode engine
+- Select 1 Delivrables
+- Derivatives 1 will be _M4A_ (option 6)
+   * For bit rate select _VBR_ (option 5)
+   * Map the audio however is best for the file
+- Save to PresRAID as normal
+- For the checksum select _Yes + Sidecar_ (option 2)
+   * For the checksum format select _MD5 *filename_ (option 4)
+
+### Audio Post-Transcode Check
+- Using the example _BAVC1234567_cusb_000001_prsv.mov_ the following files should now exist:
+   * BAVC1234567_cusb_000001_access.m4a
+   * BAVC1234567_cusb_000001_access.m4a.md5
+   * BAVC1234567_cusb_000001_prsv.wav
+   * BAVC1234567_cusb_000001_prsv.wav.md5
+- Open up the checksum files with text editor and make sure they have the following format in the file
+   * [checksum] *[filename without BAVC barcode]
+   * Example: 986233f5d99de3b575b3907da3c7870a *cusb_000001_prsv.mkv
+- Don't mark the the file QC ready until it has photos too. It's best to take photos early on, either before or while transferring a batch so photos don't hold up QC.
+- If everything looks correct you can mark the tape QC ready and move it to the QC folder!
+- If the access filenames look incorrect, or the checksum format is incorrect (the BAVC barcode is in the checksum, or something similar) you probably misnamed the .mov file. Make sure _prsv.mov is in the filename of the script won't process the files properly.
+
 ### Quality Control
+- CA-R has a specific MediaConch policy that works on all of their file types.
+   * Use the policy named "Meets one of California Revealed's Guidelines 12/07/2021"
+   * If the policy isn't on the computer you can find it on the [Google Drive](https://drive.google.com/drive/folders/10JVyARYQT7jNrwcUxtmNqEbkmkMpsWqY?usp=share_link) named _CA-R_MediaConch-Policy_Dec2021.xml_
 - Most quality control aspects will be the same, but here's a few things that are important to check:
-   * Preservation file is properly formatted FFV1/MKV
-      - The file should pass the _NYPL FFV1_ Mediaconch Policy
+   * Video Preservation file is properly formatted FFV1/MKV (Audio is typical .wav)
    * Access copy has embedded title
       - This which will show up at the top of the window when the file is opened Quicktime
    * Access copy has embedded metadata, visible in Mediainfo
