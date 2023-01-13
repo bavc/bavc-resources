@@ -1,7 +1,7 @@
 ---
 layout: page
 title: California Revealed Worklow
-parent: Technical Documentation
+parent: Workflow Documentation
 ---
 
 # California Revealed Workflows
