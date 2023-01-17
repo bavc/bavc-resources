@@ -6,6 +6,13 @@ parent: Admin
 
 # Vendor Contact Info
 
+## Production Contacts
+
+**Liza Kastrilevich**\
+Freelance Editing and Color-Grading / MIAP Grad\
+lk2900@nyu.edu\
+603-957-8059
+
 ## Video Contacts
 
 **Ken Zin**\
