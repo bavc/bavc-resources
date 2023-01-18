@@ -153,47 +153,47 @@ ffmpeg -i [Path To Input] -movflags faststart -aspect 16:9 -c copy  [Output File
 
 #### Mezzanine files
 
-* For Prores HQ, De-Interlaced, 24-bit PCM Audio [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
+* For ProRes HQ, De-Interlaced, 24-bit PCM Audio [Note: ProRes version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
 ```
 for file in *.mov ; do ffmpeg  -i "$file" -c:v prores -profile:v 3 -vf yadif -c:a pcm_s24le "${file%.*}_mezzanine.mov" ; done
 ```
-* For Prores HQ, De-Interlaced, 24-bit PCM Audio Channels Same as Original [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
+* For ProRes HQ, De-Interlaced, 24-bit PCM Audio Channels Same as Original [Note: ProRes version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
 ```
 for file in *.mov ; do ffmpeg -vsync 0 -i "$file" -c:v prores -profile:v 3 -vf yadif -c:a pcm_s24le "${file%.*}_mezzanine.mov" ; done
 ```
-* For Prores HQ, De-Interlaced, 24-bit PCM Audio Left Channel Panned to Center [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
+* For ProRes HQ, De-Interlaced, 24-bit PCM Audio Left Channel Panned to Center [Note: ProRes version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -vf yadif -c:a pcm_s24le -af "pan=stereo|c0=c0|c1=c0" "${file%.*}_mezzanine.mov" ; done
 ```
-* For Prores HQ, De-Interlaced, 24-bit PCM Audio Right Channel Panned to Center [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
+* For ProRes HQ, De-Interlaced, 24-bit PCM Audio Right Channel Panned to Center [Note: ProRes version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -vf yadif -c:a pcm_s24le -af "pan=stereo|c0=c1|c1=c1" "${file%.*}_mezzanine.mov" ; done
 ```
-* For Prores HQ, De-Interlaced, 24-bit PCM Audio Stereo Channels Summed to Mono [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
+* For ProRes HQ, De-Interlaced, 24-bit PCM Audio Stereo Channels Summed to Mono [Note: ProRes version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -vf yadif -c:a pcm_s24le -af "pan=stereo|c0=c0+c1|c1=c0+c1" "${file%.*}_mezzanine.mov" ; done
 ```
-* For Prores HQ, De-Interlaced, 24-bit PCM Audio 4 Channels Channels Summed to 2 Channel Mono [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
+* For ProRes HQ, De-Interlaced, 24-bit PCM Audio 4 Channels Channels Summed to 2 Channel Mono [Note: ProRes version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -vf yadif -c:a pcm_s24le -ac 2 -af "pan=stereo|c0=c0+c1+c2+c3|c1=c0+c1+c2+c3" "${file%.*}_mezzanine.mov" ; done
 ```
-* For Prores HQ, Interlaced, 24-bit PCM Audio Channels Same as Original [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
+* For ProRes HQ, Interlaced, 24-bit PCM Audio Channels Same as Original [Note: ProRes version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -c:a pcm_s24le "${file%.*}_mezzanine.mov" ; done
 ```
-* For Prores HQ, Interlaced, 24-bit PCM Audio Left Channel Panned to Center [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
+* For ProRes HQ, Interlaced, 24-bit PCM Audio Left Channel Panned to Center [Note: ProRes version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -c:a pcm_s24le -af "pan=stereo|c0=c0|c1=c0" "${file%.*}_mezzanine.mov" ; done
 ```
-* For Prores HQ, Interlaced, 24-bit PCM Audio Right Channel Panned to Center [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
+* For ProRes HQ, Interlaced, 24-bit PCM Audio Right Channel Panned to Center [Note: ProRes version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -c:a pcm_s24le -af "pan=stereo|c0=c1|c1=c1" "${file%.*}_mezzanine.mov" ; done
 ```
-* For Prores HQ, Interlaced, 24-bit PCM Audio Stereo Channels Summed to Mono [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
+* For ProRes HQ, Interlaced, 24-bit PCM Audio Stereo Channels Summed to Mono [Note: ProRes version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -c:a pcm_s24le -af "pan=stereo|c0=c0+c1|c1=c0+c1" "${file%.*}_mezzanine.mov" ; done
 ```
-* For Prores HQ, Interlaced, 24-bit PCM Audio 4 Channels Summed to 2 Channel Mono [Note: Prores version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
+* For ProRes HQ, Interlaced, 24-bit PCM Audio 4 Channels Summed to 2 Channel Mono [Note: ProRes version determined by profile #: 0=Proxy; 1=LT, 2=422 Normal, 3=HQ)
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -c:a pcm_s24le -ac 2-af "pan=stereo|c0=c0+c1+c2+c3|c1=c0+c1+c2+c3" "${file%.*}_mezzanine.mov" ; done
 ```
@@ -205,21 +205,21 @@ for file in *.mov ; do ffmbc -i "$file" -target dvcpro50 -pix_fmt yuv422p -r nts
 ```
 for file in *.m2t ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -vf yadif -filter_complex "[0:a:0]aresample=async=1:min_hard_comp=0.01" -c:a pcm_s24le -y  "${file%.*}_access.mp4" ; done
 ```
-* For Prores HQ, De-Interlaced, 24-bit PCM Audio, 16:9 output
+* For ProRes HQ, De-Interlaced, 24-bit PCM Audio, 16:9 output
 ```
 for file in *.mov ; do ffmpeg  -i "$file" -c:v prores -profile:v 3 -aspect 16:9 -vf yadif,setdar=16/9 -c:a pcm_s24le "${file%.*}_mezzanine.mov" ; done
 ```
-* Create 16:9 MOV Prores file from 4:3 MOV ProRes file without transcoding
+* Create 16:9 MOV ProRes file from 4:3 MOV ProRes file without transcoding
 ```
 ffmpeg -i [Path To Input] -aspect 16:9 -c copy  [Output File Path]
 ```
 
 #### Upres SD Files to HD
-* For HD Prores HQ, De-Interlaced, 24-bit PCM Audio, Pillarboxed 16:9 1080 Files
+* For HD ProRes HQ, De-Interlaced, 24-bit PCM Audio, Pillarboxed 16:9 1080 Files
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -aspect 16:9 -vf yadif,scale=w=1440:h=1080:flags=lanczos,pad=1920:1080:240:0 -c:a pcm_s24le -s 1920x1080 "${file%.*}_mezzanineHD.mov" ; done
 ```
-* For HD Prores HQ, De-Interlaced, 24-bit PCM Audio, Full Frame 16:9 1080 Files
+* For HD ProRes HQ, De-Interlaced, 24-bit PCM Audio, Full Frame 16:9 1080 Files
 ```
 for file in *.mov ; do ffmpeg -i "$file" -c:v prores -profile:v 3 -vf yadif,scale=w=1920:h=1080:flags=lanczos -aspect 16:9 -c:a pcm_s24le "${file%.*}_mezzanineHD.mov" ; done
 ```
@@ -377,7 +377,7 @@ for file in *.* ; do md5 -q "$file">"${file}.md5" ; done
 
 ### Other Checksum types
 
-Other common checksum types canbe created with commands already installed on a mac.
+Other common checksum types can be created with commands already installed on a mac.
 
 To create a SHA-1 checksum use this command:
 
@@ -403,9 +403,9 @@ rsync -avv --progress [FILE OR DIRECTORY] [DESTINATION FOLDER]
 ```
 ***
 ## DVRescue
-DVRescue is a suite of tools that allow you to fix and re-wrap dv diles.
+DVRescue is a suite of tools that allow you to fix and re-wrap dv files.
 
-DVPackager is a part of the suite that slipts up dv streams with different attributes contained in a single file. The input is always a DV file. You can use it to package a .dv file as 1 or many .mov files with the following command:
+DVPackager is a part of the suite that slips up dv streams with different attributes contained in a single file. The input is always a DV file. You can use it to package a .dv file as 1 or many .mov files with the following command:
 ```
 dvpackager -e mov [path/to/file.dv]
 ```
