@@ -14,9 +14,9 @@ Set a periodic reminder to check the front of the SAN. There should be only blue
 
 ## GUI Maintenance Portal
 
-The online GUI has more information about the SAN. It logs errors, showst the status of the drives, and allows you to add more SAN clients to the network.
+The online GUI has more information about the SAN. It logs errors, shows the status of the drives, and allows you to add more SAN clients to the network.
 
-To log into the GUI you'll need to navigate to the IP address and log in. This information can all be found in 1password, under the entry _SAN Maintenance GUI_. In this entry there are two IP addresses, one for each SAN controller. These are redundant, you can use either. You will have to accept a security risk, don't worry about this. It also might get mad at your browser, but that shoudn't be a problem. It may ask you to download a version of Flash Player, this shouldn't be necessary.
+To log into the GUI you'll need to navigate to the IP address and log in. This information can all be found in 1password, under the entry _SAN Maintenance GUI_. In this entry there are two IP addresses, one for each SAN controller. These are redundant, you can use either. You will have to accept a security risk, don't worry about this. It also might get mad at your browser, but that shouldn't be a problem. It may ask you to download a version of Flash Player, this shouldn't be necessary.
 
 ### SAN and Drive Status
 
@@ -24,7 +24,7 @@ Once logged in, you check the status of the SAN and the drives by pressing the _
 
 ### Alarms
 
-At the top of the page you'll see a counter for _Critical_, _Major_, and _Warning_ errors. It's good to periodically check these. Sometimes it'll alert you that the Fibre Channel (FC) connection was lost. This is usually due to a bad cable, SFP, connector, or card, but is usually just a glitch that causes a SAN dropout on the client side. If these are happenign constantly it's worth checking out. The errors are pretty well described, if you see something that seems scary reach out to Symply's support. If you address the error make sure to clear it so we know when new errors appear. 
+At the top of the page you'll see a counter for _Critical_, _Major_, and _Warning_ errors. It's good to periodically check these. Sometimes it'll alert you that the Fibre Channel (FC) connection was lost. This is usually due to a bad cable, SFP, connector, or card, but is usually just a glitch that causes a SAN dropout on the client side. If these are happening constantly it's worth checking out. The errors are pretty well described, if you see something that seems scary reach out to Symply's support. If you address the error make sure to clear it so we know when new errors appear. 
 
 
 ### Adding a computer to the network

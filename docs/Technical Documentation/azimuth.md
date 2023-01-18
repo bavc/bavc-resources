@@ -34,7 +34,7 @@ A word of warning: Make sure to remove the screw driver before pressing Stop. Th
 
 ## Otari MX-55 Adjustments
 
-On the MX-55 the playhead is the rightmost head. There are thre heads total. From left to right they are:
+On the MX-55 the playhead is the rightmost head. There are three heads total. From left to right they are:
 * Erase Head
 * Record Head
 * Playback Head

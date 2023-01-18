@@ -26,6 +26,6 @@ When entering data in Salesforce, NEVER guess. Always ask if you are unclear abo
 
 * All conservation treatment and activities should be logged in the object's preservation record in Salesforce to prevent duplicate efforts and confusion. Every clean and bake should be logged in the 'Preservation Activities" module. Our ovens have their temperatures locked in to prevent changes; if you'd like to change the oven temperature, please talk to your supervisor.
 
-To avoid the spread of mold, any tape suspected of mold should be sealed in a ziploc bag with desiccants. The tape should remain that way until it has been determined either that there is no mold, or it has been treated by Peter Brothers.
+To avoid the spread of mold, any tape suspected of mold should be sealed in a ziplock bag with desiccants. The tape should remain that way until it has been determined either that there is no mold, or it has been treated by Peter Brothers.
 
 Peter Brothers runs a small, high-volume operation and does not have the staff to accurately track the move of materials. The onus is on us to make sure he has received the tape and servicing us in a timely manner. Whenever a tape is sent to Spec Bros for mold treatment, the activity should be logged in the Activity module of Salesforce. Attach a record of the FedEx tracking number and note the estimated arrival of the tape. When the tape has arrived according to FedEx, call Peter and make sure the package was received. Follow up with him every two weeks on the status of the service.

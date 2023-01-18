@@ -10,7 +10,7 @@ parent: Technical Documentation
 
 Digital Cinema Packages (DCP) are files specifically made to be projected in a Digital Cinema Projector. They have a very specific structure and format, and thus it's very important to QC them before they are projected for a festival, screening, or exhibit.
 
-QCing DCPs involves using some specialized software, along with some QC steps that are typical of most BAVC QC Workflows. This article will describe the general process of QCing DCPs, as well as how to install the software. Intalling the software is *not easy at all* so be very careful and read the instructions thoroughly
+QCing DCPs involves using some specialized software, along with some QC steps that are typical of most BAVC QC Workflows. This article will describe the general process of QCing DCPs, as well as how to install the software. Installing the software is *not easy at all* so be very careful and read the instructions thoroughly
 
 
 For the purpose of testing the QC software you can use [this](https://www.charbon-studio.com/get/dcps/CHARBON-INTEROP-24.zip) sample DCP, which is found in this [repository of sample files](https://www.charbon-studio.com/resources).
@@ -46,7 +46,7 @@ make
 make install
 ```
 
-If done correctly, a bunch of new command line tool will have been installed. You can test this by running the `asdcp-test` command. You shoud see output like
+If done correctly, a bunch of new command line tool will have been installed. You can test this by running the `asdcp-test` command. You should see output like
 
 ```
 No operation selected (use one of -[gGcitux] or -h for help).
@@ -63,7 +63,7 @@ Then you didn't install the tool properly. Check the commands you ran and try ag
 
 Now, it's time to install `clairmeta` itself.
 
-go to the [Github Repo](https://github.com/Ymagis/ClairMeta) and download it. Move the GitHub repo to whereever you like to keep your repos. Move your terminal window into the repo by using the `cd` command.
+go to the [Github Repo](https://github.com/Ymagis/ClairMeta) and download it. Move the GitHub repo to where ever you like to keep your repos. Move your terminal window into the repo by using the `cd` command.
 
 Now you can install the tool by running the following command:
 
@@ -111,7 +111,7 @@ python3 -m clairmeta.cli probe -type dcp [path/to/dcp] -format json > [output/pa
 
 In that case you need to define the output path and give it a .json extension. You can really make it anything, just be sure it ends in .json, though it's easiest if you just make it a sidecar file of the original DCP *(don't put it in the DCP!)*
 
-To check the DCP you'll use th following command:
+To check the DCP you'll use the following command:
 
 ```
 python3 -m clairmeta.cli -check dcp [path/to/dcp]

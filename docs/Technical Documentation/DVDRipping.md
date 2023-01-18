@@ -15,7 +15,7 @@ parent: Technical Documentation
 # Walkthrough with Details and Instructions
 
 ## Load the DVD Into the Drive
-Either load the DVD into the slot on the side of the computer, or open the tray with the Eject (⏏) button on the keyboard, load the disc in the tray, then press Eject again to cose the tray
+Either load the DVD into the slot on the side of the computer, or open the tray with the Eject (⏏) button on the keyboard, load the disc in the tray, then press Eject again to close the tray
 
 ## Unmount the DVD using drutil
 In order for ddrescue to rip the DVD, you'll need to unmount the disk from the computer. Unmounting is different from ejecting. Ejecting implies physically removing the disk from the computer. Unmounting simply means virtually removing the disk as a readable filesystem from the computer's directory
