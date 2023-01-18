@@ -30,6 +30,8 @@ At BAVC we prefer to preserve tapes as close to their original format as possibl
 
 However, you should note the fact that tape has anamorphic content in the Technicians Notes.
 
+vrecord will display the content in 4:3, but you can set the CRT monitor to display the content as 16:9 if you want to make sure everything is looking good. The monitor will add black bars at the top and bottom, but these are not captured in the file (as long as the vrecord content looks the same)
+
 ## Creating Proper Anamorphic Access Files
 
 While we don't capture anamorphic Preservation files at all, we do want to adjust the Access files so that they can be viewed in their proper aspect ratio. 
