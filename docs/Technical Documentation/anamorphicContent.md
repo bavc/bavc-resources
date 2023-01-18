@@ -24,6 +24,8 @@ It can sometimes be hard to tell if content is anamorphic or not, since the chan
 * If familiar circular objects like balls, traffic lights or stop signs look distorted
 * If subtitles look taller than usual
 
+Anamorphic content can be found on almost any video tape format. However it is most common on MiniDV and DigiBeta. We don't need to worry about the workflow details for MiniDV because dvrescue takes care of it for us. 
+
 ## Capturing Anamorphic Content
 
 At BAVC we prefer to preserve tapes as close to their original format as possible. As a result, digitizing anamorphic content is no different than digitizing non-anamorphic content. The Preservation Files that we deliver for anamorphic content will be distorted, 4:3 files. This is because we want to make sure there is consistency across all digitized files. 
