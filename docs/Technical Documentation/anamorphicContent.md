@@ -42,7 +42,7 @@ Our Transcode Engine script cannot handle anamorphic content (for now...), so yo
 
 ### Method 1: Create a 16:9 Access File From the 4:3 Access File
 
-This is perhaps the preferred method. You run the transcode engine script as normal, then reprocess the MP4 files to make them 16:9. This does not perform a transcode, but rather updates the file's "Aspect Ratio" metadata flag to 16:9 from 4:3. Basically, rather than changing the size of the file, it simply changes how the file is displayed. Just like project a film through an anamorphic lens!
+This is perhaps the preferred method. You run the transcode engine script as normal, then reprocess the MP4 files to make them 16:9. This does not perform a transcode, but rather updates the file's "Aspect Ratio" metadata flag to 16:9 from 4:3. Basically, rather than changing the size of the file, it simply changes how the file is displayed. Just like projecting a film through an anamorphic lens!
 
 You can run it on a single file like this: 
 
