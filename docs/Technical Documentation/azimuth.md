@@ -28,6 +28,8 @@ Below we'll describe which screws to turn for each of our decks.
 
 For all our Tascam decks we replace the typical Philips azimuth screw with a torx style screw. These types of screws are less likely to strip and easier to use. We purchase the screws from Fastener-Express. This is the part number: M2 x .4 x 8mm Pan Head Star (Torx Style) Socket Screws A2 Stainless MPTS208-9N4.
 
+The screwdriver you'll want to use is the _t6 x 30mm_ screw. The one from the small screwdriver kit has a pink bottom. 
+
 The screw is only accessible when the deck is in play mode. The azimuth screw is the bottom screw on the right side of the playhead.
 
 A word of warning: Make sure to remove the screw driver before pressing Stop. The 122 will retract the head stack when you hit stop, and if the screwdriver is in there it could potential damage the deck.
