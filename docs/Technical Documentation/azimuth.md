@@ -6,7 +6,7 @@ parent: Technical Documentation
 
 # Adjusting Azimuth for Audio Tape Recordings
 
-Azimith adjustments must be made for every audiocassette and open reel audio tape we transfer. Adjusting the azimuth ensures maximum head alignment, and gets the best sounding transfers.
+Azimuth adjustments must be made for every audiocassette and open reel audio tape we transfer. Adjusting the azimuth ensures maximum head alignment, and gets the best sounding transfers.
 
 For more information about why we adjust azimuth and more details about how to do it check out this [excellent article on the topic](https://richardhess.com/notes/2006/09/27/azimuth-hows-and-whys/)
 
@@ -26,11 +26,11 @@ Below we'll describe which screws to turn for each of our decks.
 
 ## Tascam 122Mkiii Adjustments
 
-For all our Tascam decks we replace the typical philips azimuth screw with a torx style screw. These types of screws are less likely to strip and easier to use. We purchase the screws from Fasterner-Express. This is the part number: M2 x .4 x 8mm Pan Head Star (Torx Style) Socket Screws A2 Stainless MPTS208-9N4.
+For all our Tascam decks we replace the typical Philips azimuth screw with a torx style screw. These types of screws are less likely to strip and easier to use. We purchase the screws from Fastener-Express. This is the part number: M2 x .4 x 8mm Pan Head Star (Torx Style) Socket Screws A2 Stainless MPTS208-9N4.
 
 The screw is only accessible when the deck is in play mode. The azimuth screw is the bottom screw on the right side of the playhead.
 
-A word of warning: Make sure to remove the screw driver beforing pressing Stop. The 122 will retract the head stack when you hit stop, and if the screwdriver is in there it could potential damage te deck.
+A word of warning: Make sure to remove the screw driver before pressing Stop. The 122 will retract the head stack when you hit stop, and if the screwdriver is in there it could potential damage the deck.
 
 ## Otari MX-55 Adjustments
 
