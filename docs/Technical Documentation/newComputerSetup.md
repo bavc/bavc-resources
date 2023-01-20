@@ -17,13 +17,16 @@ parent: Technical Documentation
 
 ## Installing Software
 
+- Install the latest version of Blackmagic Desktop Video that the OS you're on is compatible with
+  - Desktop Video 12.4 is the latest version that MacOS 11 BigSur can handle
+  - After installing Desktop Video you'll need to allow security extensions. You can do this by going to System Preferences -> Security & Privacy, then unlocking the window and pressing "Allow" at the bottom of the screen.
 - Install all the software in the NewStationSoftware folder on Google Drive
 - Install the latest version of XCode compatible with the OS version running on the computer. You can find [XCode installers here](https://xcodereleases.com/).
 - Install Homebrew using the directions here: [https://brew.sh/](https://brew.sh/)
 - Install the critical command tools via homebrew with these commands:
-  * brew install ffmpeg
   * brew tap amiaopensource/amiaos
   * brew install vrecord
+  * brew install ffmpeg
   * brew install qcli
   * brew install mediainfo
   * brew install sox
@@ -31,3 +34,4 @@ parent: Technical Documentation
   * brew install cdrtools
   * brew install cuetools
   * brew install bwfmetaedit
+  * or, you should be able to run `brew tap amiaopensource/amiaos && brew install vrecord ffmpeg qcli mediainfo sox id3v2 cdrtools cuetools bwfmetaedit`
