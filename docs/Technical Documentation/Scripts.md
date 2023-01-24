@@ -334,7 +334,7 @@ mediainfo --Inform="General;\n%FileName%\n%Duration/String4%\n%FileSize/String4%
 
 A checksum is a string of letters and numbers that acts like a fingerprint for a file. If two files have the same sum, it is safe to assume the files are the same.
 
-Our transcode engine script creates checksums automatically, but it's good to know how to do it manually in case you run across weird files. 
+Our transcode engine script creates checksums automatically, but it's good to know how to do it manually in case you run across weird files.
 
 ### MD5 Checksums
 
@@ -572,53 +572,25 @@ Here are some very basic CLI steps for updating GitHub projects via Terminal.
 Here is a great guide with more explanatory notes about checkouts, branches, and other features: http://rogerdudler.github.io/git-guide/.
 ***
 ## Rename
-### General Use
-Rename is a super useful tool for renaming files and folders in bulk. It's pretty tricky to use, but here's a quick explanation of a simple use case
 
-  * Installation is simple, just run `brew install rename`
-  * In this example we will rename all files with the     extension .jpeg to have the extension .jpg instead.
-  * First you need to `cd` into a the folder you want to rename.
-  * Then run this command
+Rename is used to rename barcodes. You can learn more about barcode removal workflows [here]({{site.baseurl}}//docs/Technical%20Documentation/removingBarcodes.html)
+
+You can read the manual [here](http://plasmasturm.org/code/rename/)
+
+The following command will rename all files with a `.jpeg` extension to a `.jpg` extension within the working directory. This is a dry run, run without the -n command to actually perform the rename.
+
   ```
   rename -n 's/\.jpeg/\.jpg/' *
   ```
-  * The `-n` flag will run in dry-run mode,  meaning it will tell you what it will do before doing it.
-  * `s/\.jpeg/\.jpg/` tells rename to look at the standard in, and replace ".jpeg" with ".jpg" in any file it finds
-  * the `*` tells rename to look at every file in the working directory.
-  * Once you run the command in dry-run mode it'll show you what changes it will make. If you're happy with that run the command again without the -n flag and it'll actually rename the files:
-  ```
-  rename 's/\.jpeg/\.jpg/' *
-  ```
-The above example just runs on files in a single folder. If you want to run the command on a bunch of recursive directories you'll need to use a more complex command:
-  * First you need to `cd` into a the folder you want to rename.
-  * Then run this command
-  ```
-  find . -type f -name '*.jpeg' -print0 | xargs -0 rename -n 's/\.jpeg/\.jpg/
-  ```
-  * This part: `find . -type f -name '*.jpeg' -print0 | xargs -0` performs a find in the working directory for any file ending with ".jpeg". Then it passes the file path to rename, which runs in dry-run mode
-  * If you're happy with what dry-run mode comes up with, you can run it for real without the -n flag
+
+The following command will rename all files with a `.jpeg` extension to a `.jpg` extension recursively from the working directory. This is a dry run, run without the -n command to actually perform the rename.
+
   ```
   find . -type f -name '*.jpeg' -print0 | xargs -0 rename 's/\.jpeg/\.jpg/
   ```
-In both examples we're just replacing .jpeg with .jpeg with this command: `s/\.jpeg/\.jpg/`
 
-Keep in mind you can replace any string with any other string. It's very useful!
+The following command will remove the barcodes (first 12 characters) from every file in the working directory. This is a dry run, run without the -n command to actually perform the rename.  
 
-### Removing Barcodes
-
-`rename` can very easily remove barcodes from files names. However, it's **very dangerous** because you can easily mangle files names with this command.
-
-  * First, you need to make sure you remove all hidden files from the working directory.
-  * `cd` into whatever directory you want to rename the files in
-  * Run this command to see every hidden file in the directory `find . -name ".*"`
-  * If what you see looks like just hidden files, then run this command to remove hidden files. BE SUPER CAREFUL DON'T MESS THIS UP OR YOU CAN REMOVE EVERY FILE IN THE DIRECTORY.
+    ```
+    rename -n 's/.{12}(.*)/$1/' *
   ```
-  find . -name ".*" -exec rm  -vR {} \;
-  ```
-  * From here you can run the following command to remove the barcodes (first 12 characters) from every file in the folder
-  ```
-  rename -n 's/.{12}(.*)/$1/' *
-  ```
-  * That command actually runs in dry-run mode. Remove the -n to run it for real if you're happy with the projected results of the dry-run
-
-  You can read the manual [here](http://plasmasturm.org/code/rename/)
