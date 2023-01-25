@@ -34,4 +34,7 @@ parent: Technical Documentation
   * brew install cdrtools
   * brew install cuetools
   * brew install bwfmetaedit
-  * or, you should be able to run `brew tap amiaopensource/amiaos && brew install vrecord ffmpeg qcli mediainfo sox id3v2 cdrtools cuetools bwfmetaedit`
+  * brew install python3
+  * or, you should be able to run `brew tap amiaopensource/amiaos && brew install vrecord ffmpeg qcli mediainfo sox id3v2 cdrtools cuetools bwfmetaedit python3`
+- Install the critical Python libraries with the following command
+  * pip3 install simple_salesforce
