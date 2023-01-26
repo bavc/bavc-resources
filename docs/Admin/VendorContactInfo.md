@@ -13,6 +13,13 @@ Freelance Editing and Color-Grading / MIAP Grad\
 lk2900@nyu.edu\
 603-957-8059
 
+### List of places that can make DCPs
+* Nathan Ross with [Blackwater Digital](https://www.blackwater.digital/) (Atlanta, GA)
+* [Luiza Gonçalves](https://www.linkedin.com/in/luiza-lou-goncalves-514598138/) (This is her [intake form](https://docs.google.com/forms/d/e/1FAIpQLSd6VfYhJB2aEdjCgHdxCN9S-eb05nwcynHdbF63UDFAhnRahg/viewform))
+* Bill Hill at [Hilltop Productions](www.hilltopproductionsllc.com) (Santa Fe, NM)
+* [DKP](https://dkp-image.com/encoding/dcp/) in Chicago
+
+
 ## Video Contacts
 
 **Ken Zin**\
@@ -37,6 +44,10 @@ website:  https://backporch.tv/service/
 **Jim Wagner**\
 Ampex Field technician, recommended for Ampex VP3 1" repair by Paul Grippaldi\
 925-409-5455
+
+**Digital Revolution (Paul Grippaldi)**\
+They can transfer some formats we can't, and may able to make DCPs
+[http://www.digitalrevolution.tv/](http://www.digitalrevolution.tv/)
 
 **Digitron A/V**\
 https://digitronav.com/\
