@@ -18,7 +18,7 @@ lk2900@nyu.edu\
 * [Luiza Gonçalves](https://www.linkedin.com/in/luiza-lou-goncalves-514598138/) (This is her [intake form](https://docs.google.com/forms/d/e/1FAIpQLSd6VfYhJB2aEdjCgHdxCN9S-eb05nwcynHdbF63UDFAhnRahg/viewform))
 * Bill Hill at [Hilltop Productions](www.hilltopproductionsllc.com) (Santa Fe, NM)
 * [DKP](https://dkp-image.com/encoding/dcp/) in Chicago
-
+* Dean Kavanagh: kavanagh_dean@yahoo.ie. He's in Ireland but comes highly recommended from Kieran O'Leary
 
 ## Video Contacts
 
