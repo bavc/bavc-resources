@@ -134,6 +134,10 @@ for file in *.mov ; do ffmpeg -i "$file" -c:v libx264 -pix_fmt yuv420p -movflags
 ```
 for file in *_mezzanine.mov ; do ffmpeg -i "$file" -c:v libx264 -pix_fmt yuv420p -movflags faststart -crf 17 -b:a 160000 -ar 48000 -s 1920x1080 -ac 2 -af "channelmap=map=FL|FR:channel_layout=stereo" -y  "${file%_mezzanine.*}_access.mp4" ; done
 ```
+* 1920 x 1080 Access Files from Upscaled Mezzanine Files, Audio Summed to Mono
+```
+for file in *_mezzanine.mov ; do ffmpeg -i "$file" -c:v libx264 -pix_fmt yuv420p -movflags faststart -crf 17 -b:a 160000 -ar 48000 -s 1920x1080 -ac 2 -af "pan=stereo|c0=c0+c1|c1=c0+c1" -y  "${file%_mezzanine.*}_access.mp4" ; done
+```
 * 1920 x 1080 Access Files from Upscaled Mezzanine Files High Quality version (crf 12 instead of 17)
 ```
 for file in *_mezzanine.mov ; do ffmpeg -i "$file" -c:v libx264 -pix_fmt yuv420p -movflags faststart -crf 12 -b:a 160000 -ar 48000 -s 1920x1080 -ac 2 -af "channelmap=map=FL|FR:channel_layout=stereo" -y "${file%_mezzanine.*}_access_HQ.mp4" ; done
